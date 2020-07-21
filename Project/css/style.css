@@ -1,0 +1,205 @@
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+}
+
+html {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+}
+
+/*HEADER NAV and BOTTOM NAV*/
+
+.site-header, .hero-bottom-nav {
+    background-color: #000;
+    width:100%;
+    display:block;
+}
+.site-header a, p, .hero-bottom-nav a {
+    color: #fff;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 50px;
+    max-width: 1140px;
+}
+
+.flex-container {
+    display:flex;
+}
+
+.site-header .container, .hero-bottom-nav .container {
+    justify-content: space-between;
+    align-items:center;
+}
+
+.main-nav-left li, .main-nav-right li, .bottom-nav-left li, .bottom-nav-left li {
+    list-style:none;
+}
+
+.main-nav-left a, .main-nav-right a i, .main-nav-right p, .bottom-nav-left a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.main-nav-right p {
+    background-color: #ad0d0d;
+}
+
+.main-nav-right a:hover, .main-nav-right a:active, .main-nav-left a:hover, .main-nav-left a:active, .bottom-nav-left a:hover, .bottom-nav-left a:active{
+    background-color: #ad0d0d;
+    border-radius: 0px;
+}
+
+.main-nav-right a:hover, .main-nav-right a:active {
+    padding: 10px 0px;
+}
+
+.bottom-nav-right, .main-nav-right {
+    padding-right: 40px;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+/*HERO*/
+.hero{
+    padding: 120px 90px 40px 90px;
+    background: #5c5757;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    color: #fff;
+}
+
+.bottom-nav-right input{
+    border-radius: 10px; 
+    padding: 10px;
+}
+/*HOLIDAYS*/
+.holidays .section-content img {
+    max-width: 100%;
+}
+.holidays {
+    padding: 20px 70px;
+    display: block;
+}
+
+.holiday-blog {
+    padding: 20px;
+}
+
+/*POSTS*/
+
+.line {
+    height: 5px;
+    background: #000;
+    margin: 5px 0px;
+}
+
+.posts-topic {
+    position: relative;
+    top: 40px;
+    background: #fff;
+    display: inline-block;
+    padding: 0 30px;
+    left: 200px
+}
+
+/*POSTS*/
+/*LEFT COLUMN*/
+.column-left .main-posts img {
+    max-width: 210px;
+}
+
+.column-left .main-posts {
+    padding-top: 40px
+}
+.container-header {
+    padding-top: 20px;
+}
+.column-left .main-posts .main-posts-details {
+    display: inline-block;
+    max-width: 350px
+}
+
+.general-posts .column-left {
+    float: left;
+    width: 65%;
+    padding: 0px;
+}
+
+.general-posts .tags li {
+    display: inline-block;
+    background: #ad0d0d;
+    padding: 4px 20px;
+}
+.general-posts .tags li a{
+    text-decoration: none;
+    color: #000
+}
+
+.main-posts-details a {
+    color: #000;
+    text-decoration: none;
+}
+
+.general-posts .column-right {
+    float: left;
+    width: 35%;
+    padding: 30px;
+}
+
+/*POSTS - RIGHT COLUMN */
+.column-right .latest-posts img {
+    max-width: 150px;
+}
+
+.column-right h2 {
+    padding-top: 30px
+}
+
+.right-column .latest-posts img {
+    max-width: 150px;
+}
+
+.column-right .latest-posts .latest-posts-details {
+    display: inline-block;
+    max-width: 140px
+}
+
+.column-right .latest-posts .latest-posts-details a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*POSTS LEFT COLUMN*/
+.column-left .button {
+    border: none;
+    background-color: #ad0d0d;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    float: right;
+}
+
+
+/*GENERAL INFO*/
+.general-info .column {
+    float: left;
+    width: 33.33%;
+    padding: 55px;
+}
+
+
+
