@@ -13,6 +13,10 @@ body {
     margin: 0;
 }
 
+ul { 
+    padding-left: 0; 
+}
+
 /*HEADER NAV and BOTTOM NAV*/
 
 .site-header, .hero-bottom-nav {
@@ -64,7 +68,7 @@ body {
 }
 
 .bottom-nav-right, .main-nav-right {
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 .mobile-nav {
@@ -87,50 +91,43 @@ body {
     padding: 10px;
 }
 /*HOLIDAYS*/
-.holidays .section-content img {
+.holiday-posts .section-content img {
     max-width: 100%;
 }
-.holidays {
-    padding: 20px 70px;
-    display: block;
+.holiday-image {
+    padding: 10px
 }
-
-.holiday-blog {
-    padding: 20px;
-}
-
 /*POSTS*/
 
-.line {
-    height: 5px;
-    background: #000;
-    margin: 5px 0px;
+.general-posts .column-left h2 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px;
 }
 
-.posts-topic {
-    position: relative;
-    top: 40px;
-    background: #fff;
-    display: inline-block;
-    padding: 0 30px;
-    left: 200px
+.general-posts .column-left span {
+    background:#fff; 
+    padding:0px 40px;
 }
 
 /*POSTS*/
 /*LEFT COLUMN*/
+
 .column-left .main-posts img {
-    max-width: 210px;
+    max-width: 35%;
 }
 
 .column-left .main-posts {
-    padding-top: 40px
+    padding-top: 40px;
 }
 .container-header {
     padding-top: 20px;
 }
 .column-left .main-posts .main-posts-details {
     display: inline-block;
-    max-width: 350px
+    max-width: 60%;
 }
 
 .general-posts .column-left {
@@ -142,7 +139,7 @@ body {
 .general-posts .tags li {
     display: inline-block;
     background: #ad0d0d;
-    padding: 4px 20px;
+    padding: 4px 10px;
 }
 .general-posts .tags li a{
     text-decoration: none;
@@ -155,28 +152,19 @@ body {
 }
 
 .general-posts .column-right {
-    float: left;
+    float: right;
     width: 35%;
-    padding: 30px;
+    padding: 0px 30px 0px 30px;
 }
 
 /*POSTS - RIGHT COLUMN */
 .column-right .latest-posts img {
-    max-width: 150px;
+    max-width: 55%;
 }
-
-.column-right h2 {
-    padding-top: 30px
-}
-
 
 .column-right .latest-posts .latest-posts-details {
     display: inline-block;
-    max-width: 150px
-}
-.column-right .latest-posts .latest-posts-details {
-    display: inline-block;
-    max-width: 150px
+    max-width: 100px;
 }
 
 .column-right .latest-posts .latest-posts-details a {
@@ -202,7 +190,12 @@ body {
 .general-info .column {
     float: left;
     width: 33.33%;
-    padding: 55px;
+    padding: 100px;
+}
+
+#bottom-searchbar {
+    max-width: 100px;
+
 }
 
 .general-info .column ul {
@@ -210,7 +203,7 @@ body {
     line-height: 1.8;
 }
 .general-info .column h2 {
-    text-align: center;
+    text-align: left;
 }
 
 /*footer*/
@@ -221,15 +214,69 @@ body {
 
 @media screen and (max-width: 980px) {
     .general-posts .column-left {
-        width: 100%
+        width: 100%;
     }
     .general-posts .column-right {
         width: 100%;
     }
-    .site-header {
+    .main-nav-left, .main-nav-right {
         display: none;
     }
-    .general-info .column {
-        
+    .general-posts .column-right {
+        padding: 0;
     }
+    .mobile-nav {
+        display: block;
+    }
+    .main-posts {
+        width: 100%;
+    }
+    .hero .container {
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom-nav-left {
+        line-height: 1.6;
+        padding-right: 40px
+    }
+    .general-info .column {
+        width: 100%;
+        padding: 20px;
+    }
+    .hero h1 {
+        font-size: 3rem
+    }
+    .footer {
+        font-size: 0.5rem
+    }
+    .column-left .main-posts img, .column-right .latest-posts img {
+    max-width: 45%;
+    }
+    .column-left .main-posts .main-posts-details {
+    max-width: 50%;
+    }
+    .tags {
+        font-size: 0.8rem
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .hero h1 {
+        font-size: 2rem
+    }
+    .column-left .latest-posts-topic, .column-left .latest-posts-date {
+        font-size: 0.6rem
+    }
+    
+    .tags {
+        font-size: 0.45rem;
+    }
+    
+    
 }

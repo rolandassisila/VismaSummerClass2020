@@ -29,6 +29,14 @@
                     <li><p><span id="date"></span></p></li>
                 </ul>
             </nav>
+            <nav class="mobile-nav">
+                <ul id="mMenu" class="flex-container">
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <!--a simple function needed for a drop down menu-->
+                    <i class="fa fa-bars"></i>
+                </a>
+                </ul>
+            </nav>
         </div>
     </header>
     <section class="hero">
@@ -54,24 +62,20 @@
             </nav>
         </div>
     </section>
-    <section class="holidays">
-        <div class="container flex-container">
+    <section class="holiday-posts">
+        <div class="container">
             <div class="section-content flex-container">
-                <div class="holiday-blog">
-                    <img src="images/city-1.jpg" alt="city number 1">
-                    
+                <div class="holiday-image">
+                    <img src="images/city-1.jpg" alt="#">
                 </div>
-                <div class="holiday-blog">
-                    <img src="images/city-2.jpg" alt="city number 1">
-                    
+                <div class="holiday-image">
+                    <img src="images/city-2.jpg" alt="#">
                 </div>
-                <div class="holiday-blog">
-                    <img src="images/city-3.jpg" alt="city number 1">
-                    
+                <div class="holiday-image">
+                    <img src="images/city-3.jpg" alt="#">
                 </div>
-                <div class="holiday-blog">
-                    <img src="images/city-4.jpg" alt="city number 1">
-                    
+                <div class="holiday-image">
+                    <img src="images/city-4.jpg" alt="#">
                 </div>
             </div>
         </div>
@@ -81,12 +85,11 @@
             <div class="row">
                 <div class="column-left">
                     <div class="container-header">
-                        <h2 class="posts-topic">Lorem Ipsum</h2>
-                        <div class="line"></div>
+                        <h2><span>Lorem Ipsum</span></h2>
                     </div>
                     <button class="button">Add Post</button>
                     <div class="main-posts">
-                            <img src="images/city-2.jpg">
+                            <img src="images/city-2.jpg" alt="#">
                             <div class="main-posts-details">
                                 <ul class="tags">
                                     <li><a href="#">Lorem</a></li>
@@ -102,7 +105,7 @@
                             </div>
                         </div>
                     <div class="main-posts">
-                            <img src="images/city-2.jpg">
+                            <img src="images/city-2.jpg" alt="#">
                             <div class="main-posts-details">
                                 <ul class="tags">
                                     <li><a href="#">Lorem</a></li>
@@ -121,7 +124,7 @@
                 <div class="column-right">
                     <h2>Lorem Ipsum</h2>
                         <div class="latest-posts">
-                            <img src="images/city-1.jpg">
+                            <img src="images/city-1.jpg" alt="#">
                             <div class="latest-posts-details">
                                 <ul class="latest-posts-topic">
                                     <h3>Lorem Ipsum</h3>
@@ -132,7 +135,7 @@
                             </div>
                         </div>
                     <div class="latest-posts">
-                            <img src="images/city-1.jpg">
+                            <img src="images/city-1.jpg" alt="#">
                             <div class="latest-posts-details">
                                 <ul class="latest-posts-topic">
                                     <h3>Lorem Ipsum</h3>
@@ -143,7 +146,7 @@
                             </div>
                         </div>
                     <div class="latest-posts">
-                            <img src="images/city-1.jpg">
+                            <img src="images/city-1.jpg" alt="#">
                             <div class="latest-posts-details">
                                 <ul class="latest-posts-topic">
                                     <h3>Lorem Ipsum</h3>
@@ -179,10 +182,10 @@
                     </ul>
                 </div>
                 <div class="column">
-                <h2>Lorem Ipsum</h2>
-                    <ul class="flex-container">
-                    <input type="text" placeholder="Search..">
-                </ul>
+                    <h2>Lorem Ipsum</h2>
+                        <ul>
+                        <input type="text" id="bottom-searchbar" placeholder="Search..">
+                        </ul>
                 </div>
             </div>
         </div>
