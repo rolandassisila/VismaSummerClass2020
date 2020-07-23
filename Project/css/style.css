@@ -1,3 +1,4 @@
+/* GENERAL SETTINGS */
 *,
 *::before,
 *::after {
@@ -15,6 +16,12 @@ body {
 
 ul { 
     padding-left: 0; 
+}
+
+h1, h2, h3, p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 /*HEADER NAV and BOTTOM NAV*/
@@ -61,10 +68,11 @@ ul {
 .main-nav-right a:hover, .main-nav-right a:active, .main-nav-left a:hover, .main-nav-left a:active, .bottom-nav-left a:hover, .bottom-nav-left a:active{
     background-color: #ad0d0d;
     border-radius: 0px;
+    padding: 27px 20px;
 }
 
 .main-nav-right a:hover, .main-nav-right a:active {
-    padding: 10px 0px;
+    padding: 27px 0px;
 }
 
 .bottom-nav-right, .main-nav-right {
@@ -95,7 +103,7 @@ ul {
     max-width: 100%;
 }
 .holiday-image {
-    padding: 10px
+    padding: 10px;        
 }
 /*POSTS*/
 
@@ -202,6 +210,13 @@ ul {
     text-align: none;
     line-height: 1.8;
 }
+.general-info .column li a {
+    text-decoration: none;
+    color: #000;
+}
+.general-info .column li a:hover {
+    text-decoration: underline;
+}
 .general-info .column h2 {
     text-align: left;
 }
@@ -212,6 +227,26 @@ ul {
     color: #fff;
 }
 
+/* ANIMATION */
+.zoom-transition {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.column-left .main-posts img:hover, .column-right .latest-posts img:hover, .holiday-posts .section-content img:hover {
+    opacity: .8;
+    cursor:pointer;
+}
+
+.holiday-posts .section-content img, .column-left .main-posts img, .column-right .latest-posts img {
+    transition: 0.3s;
+}
+
+/*RESPONSIVE*/
 @media screen and (max-width: 980px) {
     .general-posts .column-left {
         width: 100%;
