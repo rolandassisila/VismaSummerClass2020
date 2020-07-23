@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VISMA template</title>
     <script src="https://kit.fontawesome.com/adaa5eca50.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/largescreenstye.css">
+    <link rel="stylesheet" href="assets/css/mediumscreenstyle.css">
+    <link rel="stylesheet" href="assets/css/smallscreenstyle.css">
 </head>
 
 <body>
@@ -30,12 +33,12 @@
                 </ul>
             </nav>
             <nav class="mobile-nav">
-                <ul id="mMenu" class="flex-container">
+                <div id="mMenu" class="flex-container">
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <!--a simple function needed for a drop down menu-->
-                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-bars"></i>  
                 </a>
-                </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -57,9 +60,11 @@
                 </ul>
             </nav>
             <nav class="bottom-nav-right">
-                <ul class="flex-container">
-                    <input type="text" placeholder="Search..">
-                </ul>
+                <div class="flex-container">
+                    <label for="top-search">
+                        <input type="text" placeholder="Search..">
+                    </label>
+                </div>
             </nav>
         </div>
     </section>
@@ -68,15 +73,75 @@
             <div class="section-content flex-container">
                 <div class="holiday-image">
                     <img src="images/city-1.jpg" alt="#">
+                    <div class="holiday-post-details">
+                        <div class="tags">
+                            <ul>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                            </ul>
+                        </div>
+                        <div class="image-text">
+                            <h3>Lorem Ipsum</h3>
+                        </div>
+                        <div class="image-date">
+                            <a href="#"><span class="post-date"></span>21 July, 2020</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="holiday-image">
                     <img src="images/city-2.jpg" alt="#">
+                    <div class="holiday-post-details">
+                        <div class="tags">
+                            <ul>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                            </ul>
+                        </div>
+                        <div class="image-text">
+                            <h3>Lorem Ipsum</h3>
+                        </div>
+                        <div class="image-date">
+                            <a href="#"><span class="post-date"></span>21 July, 2020</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="holiday-image">
                     <img src="images/city-3.jpg" alt="#">
+                    <div class="holiday-post-details">
+                        <div class="tags">
+                            <ul>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                            </ul>
+                        </div>
+                        <div class="image-text">
+                            <h3>Lorem Ipsum</h3>
+                        </div>
+                        <div class="image-date">
+                            <a href="#"><span class="post-date"></span>21 July, 2020</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="holiday-image">
                     <img src="images/city-4.jpg" alt="#">
+                    <div class="holiday-post-details">
+                        <div class="tags">
+                            <ul>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                                <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
+                            </ul>
+                        </div>
+                        <div class="image-text">
+                            <h3>Lorem Ipsum</h3>
+                        </div>
+                        <div class="image-date">
+                            <a href="#"><span class="post-date"></span>21 July, 2020</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -97,12 +162,12 @@
                                     <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
                                     <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
                                 </ul>
-                                <ul class="latest-posts-topic">
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
-                                </ul>
-                                <ul class="latest-posts-date">
+                                <div class="latest-posts-topic">
+                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labfore et dolore magna aliqua. </h3>
+                                </div>
+                                <div class="latest-posts-date">
                                     <a href="#"><span class="post-date"></span>21 July, 2020</a>
-                                </ul>
+                                </div>
                             </div>
                         </div>
                     <div class="main-posts">
@@ -113,12 +178,12 @@
                                     <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
                                     <li class="zoom zoom-transition"><a href="#">Lorem</a></li>
                                 </ul>
-                                <ul class="latest-posts-topic">
+                                <div class="latest-posts-topic">
                                     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
-                                </ul>
-                                <ul class="latest-posts-date">
+                                </div>
+                                <div class="latest-posts-date">
                                     <a href="#"><span class="post-date"></span>21 July, 2020</a>
-                                </ul>
+                                </div>
                             </div>
                         </div>
                 </div>
@@ -127,34 +192,34 @@
                         <div class="latest-posts">
                             <img src="images/city-1.jpg" alt="#">
                             <div class="latest-posts-details">
-                                <ul class="latest-posts-topic">
+                                <div class="latest-posts-topic">
                                     <h3>Lorem Ipsum</h3>
-                                </ul>
-                                <ul class="latest-posts-date">
+                                </div>
+                                <div class="latest-posts-date">
                                     <a href="#"><span class="post-date"></span>21 July, 2020</a>
-                                </ul>
+                                </div>
                             </div>
                         </div>
                     <div class="latest-posts">
                             <img src="images/city-1.jpg" alt="#">
                             <div class="latest-posts-details">
-                                <ul class="latest-posts-topic">
+                                <div class="latest-posts-topic">
                                     <h3>Lorem Ipsum</h3>
-                                </ul>
-                                <ul class="latest-posts-date">
+                                </div>
+                                <div class="latest-posts-date">
                                     <a href="#"><span class="post-date"></span>21 July, 2020</a>
-                                </ul>
+                                </div>
                             </div>
                         </div>
                     <div class="latest-posts">
                             <img src="images/city-1.jpg" alt="#">
                             <div class="latest-posts-details">
-                                <ul class="latest-posts-topic">
+                                <div class="latest-posts-topic">
                                     <h3>Lorem Ipsum</h3>
-                                </ul>
-                                <ul class="latest-posts-date">
+                                </div>
+                                <div class="latest-posts-date">
                                     <a href="#"><span class="post-date"></span>21 July, 2020</a>
-                                </ul>
+                                </div>
                             </div>
                         </div>
                 </div>
@@ -184,20 +249,22 @@
                 </div>
                 <div class="column">
                     <h2>Lorem Ipsum</h2>
-                        <ul>
-                        <input type="text" id="bottom-searchbar" placeholder="Search..">
-                        </ul>
+                        <div>
+                            <label for="bottom-search">
+                                <input type="text" id="bottom-searchbar" placeholder="Search..">
+                            </label>
+                        </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="footer">
+    <footer class="footer">
         <div class="container flex-container">
             <div class="footer-nav">
                 <h3>Lorem Ipsum &copy; 2020</h3>
             </div>
         </div>
-    </section>
+    </footer>
     
     
     <script>
