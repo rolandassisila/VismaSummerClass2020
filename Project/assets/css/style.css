@@ -182,7 +182,7 @@ h1, h2, h3, p {
 }
 .general-posts .column-left {
     width: 65%;
-    padding: 0px;
+    padding: 0px 0px 30px 0px;
 }
 
 .general-posts .tags li {
@@ -206,7 +206,7 @@ h1, h2, h3, p {
     color: #fff;
     padding: 10px 20px;
     position: relative;
-    float: right;
+    left: 80%;
 }
 
 /*POSTS - RIGHT COLUMN */

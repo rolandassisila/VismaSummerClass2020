@@ -1,3 +1,5 @@
+--FIRST SET OF QUESTIONS--
+
 1. What is a DOCTYPE?
 DOCTYPE - Document Type Declaration. Supportive information that is given to the web browser about the type and version of HTML used. 
 2. How does the web work?
@@ -33,4 +35,21 @@ Resposinve web design is approach that makes web page render well and adjust on 
 17. What are different units for CSS size properties?
 Absolute lengths - units are fixed and a length expressed appear as exactly that size as expressed (e.g.cm, mm, in, px, pt, pc).
 Relative lengths - units specify a length relative to another length property (em, ex, ch, rem, vw, vh, vmin, vmax, %).
+
+--SECOND SET OF QUESTIONS--
+
+1. What is CSS box model?
+CSS box model generally is a box that wraps around HTML element. It has actual content in the middle, then padding around it, then border and finnally margin.
+2. What is the difference between an inline element and a block element?
+Block element creates a new line and takes full width of it, inline element doesn't create a new line and takes up as much width as it needs. 
+3. What are different ways to center a nested <div> horizontally?
+4. What are different ways to center a nested <div> vertically?
+Q3 and Q4 are pretty much the same. Use a box model, using a diplsay flex, table method (display parent as table and child as table-cell), display child element as inline-block, absolute and relative positioning, z-index.
+5. What are CSS pseudo elements?
+Its a keyword added to a selector that lets to add specific style to a specific part of the selected element.
+6. What are different ways to use CSS transitions?
+Triggerr transition with pseudo classes, trigger transition through javascript.
+7. What does each variable in gradient definition mean?
+Linear gradient - direction/angle, color-1, color-2,...
+Radial gradient - shape size, start color, end-color
 
