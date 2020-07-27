@@ -12,10 +12,10 @@
         display: none;
     }
     
-    .mobile-nav {
+    .dropdown .dropdownbars {
         display: block;
-        padding: 20px;
     }
+    +
     .main-posts {
         width: 100%;
     }

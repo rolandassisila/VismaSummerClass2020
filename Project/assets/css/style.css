@@ -25,6 +25,10 @@ h1, h2, h3, p {
 }
 
 /*HEADER NAV and BOTTOM NAV*/
+.site-header {
+    position: fixed;
+    z-index: 1;
+}
 
 .site-header, .hero-bottom-nav {
     background-color: #000;
@@ -59,7 +63,7 @@ h1, h2, h3, p {
 
 .main-nav-left a, .main-nav-right a i, .main-nav-right p, .bottom-nav-left a{
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-decoration: none;
     margin: 0 5px;
 }
@@ -68,14 +72,15 @@ h1, h2, h3, p {
     background-color: #ad0d0d;
 }
 
-.main-nav-right a:hover, .main-nav-right a:active, .main-nav-left a:hover, .main-nav-left a:active, .bottom-nav-left a:hover, .bottom-nav-left a:active{
+.main-nav-left a:hover, .main-nav-left a:active {
     background-color: #ad0d0d;
     border-radius: 0px;
-    padding: 27px 20px;
+    padding: 31px 20px;
 }
-
-.main-nav-right a:hover, .main-nav-right a:active {
-    padding: 27px 0px;
+.bottom-nav-left a:hover, .bottom-nav-left a:active {
+    background-color: #ad0d0d;
+    border-radius: 0px;
+    padding: 26px 20px;
 }
 
 .bottom-nav-right, .main-nav-right {
@@ -85,6 +90,86 @@ h1, h2, h3, p {
 .mobile-nav {
     display: none;
 }
+
+.twitter { 
+    background: url(/images/social-icons/twitter2.png) no-repeat; 
+}
+.pinterest { 
+    background: url(/images/social-icons/pinterest2.png) no-repeat; 
+}
+.facebook { 
+    background: url(/images/social-icons/facebook2.png) no-repeat; 
+}
+.youtube { 
+    background: url(/images/social-icons/youtube2.png) no-repeat; 
+    
+}
+
+.main-nav-right a {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 12px;
+    
+}
+
+.twitter:hover, .facebook:hover, .pinterest:hover, .youtube:hover {
+    background-position: 0px -34px;
+    transition: 0.4s;
+}
+
+.main-nav-right .date {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.burgerdropdown {
+    background: url(/images/social-icons/menubars.png);
+    background-repeat: no-repeat;
+}
+.burgerdropdown:hover {
+    background-position: -30px;
+    transition: 0.4s;
+}
+.dropdown .dropdownbars {
+	display: none;
+	width: 34px;
+	height: 24px;
+	margin: 12px;
+    zoom: 1.5
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
 
 /*HERO*/
 .hero{
