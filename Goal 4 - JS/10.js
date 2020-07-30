@@ -1,6 +1,7 @@
-function myFunction(func) {
-    var results = {
-        totalCalls : 0,
-        
-    }
-}
+var totalCount = 0;
+
+function spy(func)
+
+
+
+
