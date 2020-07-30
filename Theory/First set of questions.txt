@@ -1,0 +1,37 @@
+--FIRST SET OF QUESTIONS--
+
+1. What is a DOCTYPE?
+DOCTYPE - Document Type Declaration. Supportive information that is given to the web browser about the type and version of HTML used. 
+2. How does the web work?
+When something is enetered like google.com the request goes into DNS and basically it gets translated into a specific number by DNS (DNS keeps a set of IP addresses and names for identification). Then when request to view a page is initiated, borwsers asks DNS to translate domain name requested into IP address and browser sends request to server by using HTTP (Hypertext Transfer Protocol). Web server returns the page to the IP address specified and the browsers collects all the information and displays it in the form of Web.
+3. Do older html files work on newer browsers?   
+Yes. Most older files will work perfectly on newer browsers but some features may not work.
+4. What are the differences between different DOCTYPES (xHTML, HTML 4.01, HTML5)
+The DOCTYPE for HTML5 is much simpler than for HTML4 / XHTML it doesnt require a refer to a DTD (Documen type Definition). HTML 4.01 and xHTML are based on Standard General Markup Language (SGML) and DTD is required which specifies the rules for the markup. xHTML is basically a improved HTML 4.0.1 which had a very loose syntax. 
+5. Do all HTML tags come in pairs?
+No. A tag is said to be a paired tag if the text is placed between a tag and its companion tag. (e.g. <p> abc </p>). And there are unpaired (self-closing tags) (e.g. <br/> <img/> etc.)
+6. Why should you use different HTML5 elements in your page? What is semantic HTML? 
+Different elemtns makes modern web development esier for search engines, screen readers and others machines to identify the different parts of website and keeps site well-organized. Semantic HTML is an idea that HTML markup should represent the actual parts of the website. 
+7. Why is SEO important? What ways are there to utilize it?
+SEO improves website overall searchability and visibility. SEO can be utilized by improving title tags, optimizing site, targeting customers, have meta descriptions, image names & ALT tags and etc. 
+8. Should you put quotes around attribute values? Why?
+Technically if page is proccesed with XML (Extensible Markup Language) tools qoutes are necessary. However, if XML tools are not used, quotes are only needed if the attribute value has a space or specific symbols (<, >, =, ', `, ")
+9. How do you insert a text comment in html code?
+<!-- --> tag.
+10. What does CSS stand for?
+CSS - Cascading Style Sheets. 
+11. What are style sheets?
+Describes how HTML elements should be displayed on screen.
+12. What is CSS positioning? What are the differences between them?
+CSS positiong helps to position your HTML element it either can be relative, absolute or fixed. Relative positioning changes the position of the HTML element relative to where it normally appears. Absolute positiong puts HTML element positioned at the specified coordinates. Fixed positioning allows to put an element to a particular spot on the page, regardless of scrolling.
+13. What are CSS vendor prefixes? Why are they used?
+CSS vendor prefixes are a set support for new CSS features before those are fully supported in all browsers. They are used when different browser manufacturers implement properties in slightly different ways or with a different syntax.
+14. What is the range for font-weight value?
+100 - 900, but CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000
+15. Can several selectors with class names be grouped together?
+Yes they can be grouped by putting commas.
+16. What is responsive web design and why it’s important today?
+Resposinve web design is approach that makes web page render well and adjust on different screen sizes. It is important that site is viewable on different size screens as nowadays the number of mobile viewers outnumbers desktop viewers. 
+17. What are different units for CSS size properties?
+Absolute lengths - units are fixed and a length expressed appear as exactly that size as expressed (e.g.cm, mm, in, px, pt, pc).
+Relative lengths - units specify a length relative to another length property (em, ex, ch, rem, vw, vh, vmin, vmax, %).

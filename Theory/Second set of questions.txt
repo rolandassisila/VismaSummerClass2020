@@ -1,0 +1,17 @@
+
+--SECOND SET OF QUESTIONS--
+
+1. What is CSS box model?
+CSS box model generally is a box that wraps around HTML element. It has actual content in the middle, then padding around it, then border and finnally margin.
+2. What is the difference between an inline element and a block element?
+Block element creates a new line and takes full width of it, inline element doesn't create a new line and takes up as much width as it needs. 
+3. What are different ways to center a nested <div> horizontally?
+4. What are different ways to center a nested <div> vertically?
+Q3 and Q4 are pretty much the same. Use a box model, using a diplsay flex, table method (display parent as table and child as table-cell), display child element as inline-block, absolute and relative positioning, z-index.
+5. What are CSS pseudo elements?
+Its a keyword added to a selector that lets to add specific style to a specific part of the selected element.
+6. What are different ways to use CSS transitions?
+Triggerr transition with pseudo classes, trigger transition through javascript.
+7. What does each variable in gradient definition mean?
+Linear gradient - direction/angle, color-1, color-2,...
+Radial gradient - shape size, start color, end-color

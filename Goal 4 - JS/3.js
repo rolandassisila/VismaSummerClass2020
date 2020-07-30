@@ -1,7 +1,7 @@
 //Without ES6 methods
 
 function range(x, y) {
-  var myArray = [];
+  let myArray = [];
   for (var i = x; i < y; i += 1) {
     myArray.push(i);
   }

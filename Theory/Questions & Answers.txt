@@ -1,55 +1,64 @@
---FIRST SET OF QUESTIONS--
+--FOURTH SET OF QUESTIONS--
 
-1. What is a DOCTYPE?
-DOCTYPE - Document Type Declaration. Supportive information that is given to the web browser about the type and version of HTML used. 
-2. How does the web work?
-When something is enetered like google.com the request goes into DNS and basically it gets translated into a specific number by DNS (DNS keeps a set of IP addresses and names for identification). Then when request to view a page is initiated, borwsers asks DNS to translate domain name requested into IP address and browser sends request to server by using HTTP (Hypertext Transfer Protocol). Web server returns the page to the IP address specified and the browsers collects all the information and displays it in the form of Web.
-3. Do older html files work on newer browsers?   
-Yes. Most older files will work perfectly on newer browsers but some features may not work.
-4. What are the differences between different DOCTYPES (xHTML, HTML 4.01, HTML5)
-The DOCTYPE for HTML5 is much simpler than for HTML4 / XHTML it doesnt require a refer to a DTD (Documen type Definition). HTML 4.01 and xHTML are based on Standard General Markup Language (SGML) and DTD is required which specifies the rules for the markup. xHTML is basically a improved HTML 4.0.1 which had a very loose syntax. 
-5. Do all HTML tags come in pairs?
-No. A tag is said to be a paired tag if the text is placed between a tag and its companion tag. (e.g. <p> abc </p>). And there are unpaired (self-closing tags) (e.g. <br/> <img/> etc.)
-6. Why should you use different HTML5 elements in your page? What is semantic HTML? 
-Different elemtns makes modern web development esier for search engines, screen readers and others machines to identify the different parts of website and keeps site well-organized. Semantic HTML is an idea that HTML markup should represent the actual parts of the website. 
-7. Why is SEO important? What ways are there to utilize it?
-SEO improves website overall searchability and visibility. SEO can be utilized by improving title tags, optimizing site, targeting customers, have meta descriptions, image names & ALT tags and etc. 
-8. Should you put quotes around attribute values? Why?
-Technically if page is proccesed with XML (Extensible Markup Language) tools qoutes are necessary. However, if XML tools are not used, quotes are only needed if the attribute value has a space or specific symbols (<, >, =, ', `, ")
-9. How do you insert a text comment in html code?
-<!-- --> tag.
-10. What does CSS stand for?
-CSS - Cascading Style Sheets. 
-11. What are style sheets?
-Describes how HTML elements should be displayed on screen.
-12. What is CSS positioning? What are the differences between them?
-CSS positiong helps to position your HTML element it either can be relative, absolute or fixed. Relative positioning changes the position of the HTML element relative to where it normally appears. Absolute positiong puts HTML element positioned at the specified coordinates. Fixed positioning allows to put an element to a particular spot on the page, regardless of scrolling.
-13. What are CSS vendor prefixes? Why are they used?
-CSS vendor prefixes are a set support for new CSS features before those are fully supported in all browsers. They are used when different browser manufacturers implement properties in slightly different ways or with a different syntax.
-14. What is the range for font-weight value?
-100 - 900, but CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000
-15. Can several selectors with class names be grouped together?
-Yes they can be grouped by putting commas.
-16. What is responsive web design and why it’s important today?
-Resposinve web design is approach that makes web page render well and adjust on different screen sizes. It is important that site is viewable on different size screens as nowadays the number of mobile viewers outnumbers desktop viewers. 
-17. What are different units for CSS size properties?
-Absolute lengths - units are fixed and a length expressed appear as exactly that size as expressed (e.g.cm, mm, in, px, pt, pc).
-Relative lengths - units specify a length relative to another length property (em, ex, ch, rem, vw, vh, vmin, vmax, %).
-
---SECOND SET OF QUESTIONS--
-
-1. What is CSS box model?
-CSS box model generally is a box that wraps around HTML element. It has actual content in the middle, then padding around it, then border and finnally margin.
-2. What is the difference between an inline element and a block element?
-Block element creates a new line and takes full width of it, inline element doesn't create a new line and takes up as much width as it needs. 
-3. What are different ways to center a nested <div> horizontally?
-4. What are different ways to center a nested <div> vertically?
-Q3 and Q4 are pretty much the same. Use a box model, using a diplsay flex, table method (display parent as table and child as table-cell), display child element as inline-block, absolute and relative positioning, z-index.
-5. What are CSS pseudo elements?
-Its a keyword added to a selector that lets to add specific style to a specific part of the selected element.
-6. What are different ways to use CSS transitions?
-Triggerr transition with pseudo classes, trigger transition through javascript.
-7. What does each variable in gradient definition mean?
-Linear gradient - direction/angle, color-1, color-2,...
-Radial gradient - shape size, start color, end-color
-
+1. Why JavaScript is used on websites? Is it used only on the front-end? 
+JavaScript is used on websites because of its handines. It can be executed while you are on the page with no need for a page reload. JavaScript can be used in back-end, mobile aps and in development of games as well. 
+2. What do JavaScript functions prompt, alert and confirm do? 
+Prompt - displays a box that prompts the visitor for input, alert- display a box with message and OK button, confirm - displays a box with message, OK and Cancel buttons.
+3.Why is it preferred to include javascript and css code as separate files?
+To maintain a separation of content.
+4. What data types are in javascript?
+Number, string, object, boolean, array.
+5. What’s the difference between == and ===?
+=== strict equality, type and value of comparing are identical, == loose equality, checks only if the type is the same.
+6. What is the difference between undefined and null in JavaScript?
+Null is an empty and non exsistent value that has to be assigned. 
+Undefined is a value that is decrlared but not assigned.
+7. How to get the type of variable?
+By using typeOf operator before value.
+8. How to convert number to string? string to number?
+Number to string - toString()
+String to number - Number()
+9.What does "short-circuiting" mean in javascript context?
+It is a simple way of writing if statements. An example would be the usage of the following:
+&&(and) operator returns true if only both of its co are true.
+||(or) operator returns flase if both operands are false.
+10. What are "truthy" and "falsy" values?
+Falsy values - false, undefined, null, "", Nan, 0 anything else is considered to be thruthy.
+11. How scope works in JavaScript?
+Scope manages the accessability of variables, defines the idea of global and local variables. 
+12. Explain variable “hoisting”.
+Puting variables and function declaration into memory during the compile phase and they stay exactly there, where they are typed.
+13. What is "use strict"? What are the advantages and disadvantages to using it?
+Defines that JavaScript code should be executed in "strict mode".
+Advantages - more secure(you cant accidentaly create a new variable), improves performance and acuraccy.
+Disadvantages - more errors are present, some features disabled,  more strict and may interfare with normal mode.
+14. What is the difference between function declaration and function expression?
+Function declarations load before any code is executed while Function expressions load only when the interpreter reaches that line of code.
+15. What does it mean "javascript functions are first-class"?
+Means that functions have ability to be saved in variables and passed around as arguments.
+16. How to declare a named function? An anonymous function?
+Named function - function x(){}
+Anonymous functions - let x = function () {}
+17. What is a prototype?
+Prototype -  is a reference to another object and contains common attributes/properties across all instances of the object
+18. What is a "closure"? How to create it?
+Clouser is a combination of functions that give access to an outer function's scope from an inner funciton.
+To create it you need to define a function, declare a variable and add another function inside that uses that variable.
+19. What are "higher order functions"?
+Functions that operate by using other functions (taking them as arguments or by returning them).
+20. What is event bubbling and capturing?
+Bubbling - when event happens on an element, then on its parent, then on parents parent and so on.
+Capturing - when event goes down to the element, then targeting happens when the target element is reached and finally bubbling takes place.
+21. What is unit testing? How can it be beneficial?
+Unit testing - running a test code and checking input and output over a segment of the code. 
+Beneficial - individual areas can be tested.
+22. Describe Test-driven development.
+TTD - it is a approach of developing when you write tests before you write acctual application code. Therefore, unit tests are used.
+23. Describe Behaviour-driven development.
+BBD - is very similar to TTD but differ as all tests are written in human-readable language so it can be understood between devs, QAs and BAs. Its purpose  is to define the behaviour of a feature through examples in plain text.
+24. What is NodeJS?
+Node.js is an open source server environment, its cross-platform and it runs JS outside browser.
+25. What are most popular uses of Node?
+Used in building online-chats, streaming, browser games.
+26. What is the difference between normal function and arrow function?
+Arrow function doesn't consist a name, curly brackets are not necessary if there is only one statement, it cannot be used as constructors and function doesnt have its own 'thi' and 'arguments'.

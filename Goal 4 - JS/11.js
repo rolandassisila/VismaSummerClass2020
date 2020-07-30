@@ -14,3 +14,5 @@ function arraySum(arr) {
 }
 
 console.log(arraySum(arr));
+
+
