@@ -1,0 +1,32 @@
+-- Fifth set of questions--
+1. What's the difference between a DOM object "attribute" and a "property"?
+Attributes are additional information which we can put in the HTML to initialize certain DOM properties.
+Properties are formed when the browser parses the HTML and generates the DOM.
+2. What are advantages and disadvantages using libraries/frameworks in your project?
+Advantages - It provides efficiency, most of the times most security issues are addressed and it is secured, it is an open source.
+Disadvantages - It cannot me modified. Users can use extensions but the general code should not be modified. As well it requires a big chunck of code.
+3. What is a LocalStorage and SessionStorage? How do they differ?
+LocalStorage - Shared between all tabs and windows from the same origin, data doesn't expire after closing browser or even restarting OS.
+SessionStorage - Exists only within the current browser and single tab. Data survives page refresh but resets after closing/opening tab.
+4. What is CDN? Why is it useful?
+A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content.
+CDN is beneficial as it improves website load time, reduces bandwidth costs, Increasing content availability and improves webs security.
+5. Waiting for all data to load synchronously before being able to act makes UX (user
+experience) terrible. What are the main technologies for asynchronous data loading?
+Asynchronous JavaScript and XML (Ajax) - is a set of web development techniques using many web technologies on the client side to create asynchronous web applications. It uses such technologies as HTML, XML, JSON.
+6. What does XHR stand for? Why is it useful (or not)?
+XHR stands for XMLHttpRequest. It is fairly old technology and more useful (which replaced XHR) is Fetch. Fetch makes it easier to make asynchronous HTTP requests in JavaScript.
+7. What are the most common HTTP response codes? Which are related to a success and
+which are related to a failure?
+1xx Informational response. (100 - Continue, 101 - Switching Protocols, 102 - Processing, etc.)
+2xx Success. (200 - OK, 202 - Accepted, etc.)
+3xx Redirection. (301 - Moved Permanently, 302 - Moved Temporarily, etc.)
+4xx Client errors. (400 - Bad Request, 403 - Forbidden, 404 - Not Found, etc.)
+5xx Server errors.  (500 - Internal Server Error, 504 - Gateway Timeout, etc.)
+8. What are promises? How do they differ from callbacks?
+Promises are JavaScript objects that represent an eventual completion or failure of an asynchronous operation.
+Key difference - when using callback approach, normally callback is passed into a function, that is being called upon completion in orer to get the results. In promises callbacks can be attached on the returned promise object.
+9. Not all JS code can run on all browsers. What are polyfills? Can you create your own
+polyfill?
+A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it. 
+Yes, polyfill can be created. 
