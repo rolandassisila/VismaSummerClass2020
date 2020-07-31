@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function myFunc(number) {
     console.log("Function been called with " + number);
 }
@@ -21,14 +20,3 @@ let spied = spy(myFunc);
 spied(5)
 spied(3)
 spied(4)
-
-
-
-=======
-function myFunction(func) {
-    var results = {
-        totalCalls : 0,
-        
-    }
-}
->>>>>>> goal-3

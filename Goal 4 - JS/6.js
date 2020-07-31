@@ -3,4 +3,4 @@ function duplicates(numbers) {
     return Array.from(new Set(numbers));
 }
 
-console.log(duplicates(numbers))
+console.log(duplicates(numbers)) 
