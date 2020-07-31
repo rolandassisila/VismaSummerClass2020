@@ -16,15 +16,26 @@ var houses = [
 
 function motto(name) {
   for (var i = 0; i < houses.length; i++) {
+<<<<<<< HEAD
     let h = houses[i];
+=======
+    var h = houses[i];
+>>>>>>> goal-3
     if (h.name === name) {
       return h.motto;
     }
   }
+<<<<<<< HEAD
   return '';
 }
 
 console.log(motto('Stark'));
+=======
+  return "";
+}
+
+console.log(motto("Stark"));
+>>>>>>> goal-3
 */
 
 //ES6
@@ -34,4 +45,8 @@ function motto(name) {
   return house ? house.motto : '';
 }
 
+<<<<<<< HEAD
 console.log(motto('Martell'));
+=======
+console.log(motto("Martell"));
+>>>>>>> goal-3

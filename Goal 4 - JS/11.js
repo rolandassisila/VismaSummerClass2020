@@ -13,6 +13,10 @@ function arraySum(arr) {
  return sum;
 }
 
+<<<<<<< HEAD
 console.log(arraySum(arr));
 
 
+=======
+console.log(arraySum(arr));
+>>>>>>> goal-3
