@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "date": "2020 08 03",
+      "author": "Rolandas",
+      "title": "LoremIpsum",
+      "content": "LoremIpsum",
+      "tags": "Lorem"
+    },
+    {
+      "title": {},
+      "content": {},
+      "id": {},
+      "tags": {},
+      "date": {},
+      "author": {}
+    },
+    {
+      "title": {},
+      "content": {},
+      "tags": {},
+      "date": {},
+      "author": {},
+      "id": "_zC6bRW"
+    }
+  ]
+}

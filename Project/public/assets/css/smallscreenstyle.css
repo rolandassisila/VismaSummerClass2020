@@ -1,0 +1,12 @@
+@media screen and (max-width: 460px) {
+    .hero h1 {
+        font-size: 2rem
+    }
+    .column-left .latest-posts-topic, .column-left .latest-posts-date {
+        font-size: 0.6rem
+    }
+    
+    .tags {
+        font-size: 0.45rem;
+    }
+}
