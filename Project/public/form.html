@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a post</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/postedit.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+
     <form id="form" method="post">
         <input type="text" id="title" placeholder="Title" />
         <input type="text" id="content" placeholder="Content" />
@@ -15,7 +17,12 @@
         <input type="text" id="tags" placeholder="Tags" />
         <input type="text" id="author" placeholder="Author" />
         <input type="submit" value="Add Post" />
+        <input type="submit" value="Save" />
+        <input type="submit" value="Delete" />
     </form>
-    <script src="index.js"></script>
+    
+    <script src="storeindb.js"></script>
+
+
 </body>
 </html>
