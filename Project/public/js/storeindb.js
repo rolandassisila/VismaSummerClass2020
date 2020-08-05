@@ -42,7 +42,7 @@ async function getData() {
        if (mainPosts) {
            
         var html = 
-            '<div class=\"main-posts\" id=\"postForm\"><img src="/images/city-2.jpg"  onClick="showPost('+item.id+')" alt="#"><div class="main-posts-details"><ul class="tags"><li class="zoom zoom-transition"><a href="#">'+item.tags+'</a></li><li class="zoom zoom-transition"><a href="#">Lorem</a></li><li class="zoom zoom-transition"><a href="#">Lorem</a></li></ul><div class="latest-posts-topic"><h1>'+item.title+'</h1><h3>'+item.content+'</h3></div><div class="latest-posts-date"><a href="#"><span class="post-date"></span>'+item.date+'</a></div></div></div>';
+            '<div class=\"main-posts\" id=\"postForm\"><img src="/images/city-2.jpg"  onClick="showPost('+item.id+')" alt="#"><div class="main-posts-details"><ul class="tags"><li class="zoom zoom-transition"><a href="#">'+item.tags+'</a></li></ul><div class="latest-posts-topic"><h1>'+item.title+'</h1><h3>'+item.content+'</h3></div><div class="latest-posts-date"><a href="#"><span class="post-date"></span>'+item.date+'</a></div></div></div>';
        mainPosts.innerHTML += html;
        }
     }
