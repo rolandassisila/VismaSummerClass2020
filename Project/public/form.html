@@ -17,11 +17,14 @@
         <input type="text" id="tags" placeholder="Tags" />
         <input type="text" id="author" placeholder="Author" />
         <input type="submit" value="Add Post" />
-        <input type="submit" value="Save" />
-        <input type="submit" value="Delete" />
     </form>
-    
+    <div class="buttons">
+        <button class="button" id="cancel" onClick="cancel()">Cancel</button>
+        <button class="button" id="update" onClick="update()">Update</button>
+        <button class="button" id="delete" onClick="deletepost()">Delete</button>
+    </div>
     <script src="storeindb.js"></script>
+    <script src="saveEditDelete.js"></script>
 
 
 </body>
