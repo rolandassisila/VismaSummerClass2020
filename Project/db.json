@@ -1,12 +1,25 @@
 {
   "posts": [
     {
-      "title": "SFASF",
-      "content": "ASFASF",
-      "tags": "TASG",
-      "date": "2020-08-06",
-      "author": "asg",
-      "id": 6
+      "title": "Lorem",
+      "content": "LoremIpsum",
+      "date": "2020-07-26",
+      "author": "Lorem1",
+      "postTags": [
+        "work",
+        "holiday"
+      ],
+      "id": 1
+    },
+    {
+      "title": "Lorem",
+      "content": "IpsumLorem",
+      "date": "2020-07-29",
+      "author": "Lorem2",
+      "postTags": [
+        "leisure"
+      ],
+      "id": 2
     }
   ]
 }

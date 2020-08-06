@@ -1,5 +1,5 @@
 //date function
-n =  new Date();
+n = new Date();
 y = n.getFullYear();
 
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -10,9 +10,3 @@ var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 w = days[n.getDay()];
 
 document.getElementById("todaysdate").innerHTML = w + " " + d + " " + m + " " + y;
-
-
-
-
-
-

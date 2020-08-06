@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,9 @@
                     <li><a href="#"><i class="twitter"></i></a></li>
                     <li><a href="#"><i class="pinterest"></i></a></li>
                     <li><a href="#"><i class="youtube"></i></a></li>
-                    <li class="todaysdate"><p><span id="todaysdate"></span></p></li>
+                    <li class="todaysdate">
+                        <p><span id="todaysdate"></span></p>
+                    </li>
                 </ul>
             </nav>
             <div class="dropdown">
@@ -44,16 +47,23 @@
             </div>
         </div>
     </header>
-    
+
     <div class="newPostForm">
         <h1>Add a new Post</h1>
         <form id="form" method="post">
-            <input type="text" id="title" placeholder="Title" required/>
-            <input type="text" id="content" placeholder="Content" required/>
-            <input type="date" id="date" placeholder="Date" required/>
-            <input type="text" id="tags" placeholder="Tags" required/>
-            <input type="text" id="author" placeholder="Author" required/>
-            <input type="submit" value="Add Post" required/>
+            <input type="text" id="title" placeholder="Title" required />
+            <input type="text" id="content" placeholder="Content" required />
+            <input type="date" id="date" placeholder="Date" required />
+            <div class="radioButtons">
+                <input type="checkbox" value="work" id="work" name="postTag" />
+                <label for="Work">Work Trip</label>
+                <input type="checkbox" value="leisure" id="leisure" name="postTag" />
+                <label for="Leisure">Leisure</label>
+                <input type="checkbox" value="holiday" id="holiday" name="postTag" />
+                <label for="Holiday">Holiday</label>
+            </div>
+            <input type="text" id="author" placeholder="Author" required />
+            <input type="submit" value="Add Post" required />
         </form>
         <div class="buttons">
             <button class="button" id="cancel" onClick="cancel()">Cancel</button>
@@ -69,9 +79,10 @@
             </div>
         </div>
     </footer>
-    <script src="js/storeindb.js"></script>
+    <script src="js/loadPost.js"></script>
     <script src="js/saveEditDelete.js"></script>
     <script src="js/index.js"></script>
 
 </body>
+
 </html>
