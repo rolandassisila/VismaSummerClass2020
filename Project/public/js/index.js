@@ -9,7 +9,7 @@ d = n.getDate();
 var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 w = days[n.getDay()];
 
-document.getElementById("date").innerHTML = w + " " + d + " " + m + " " + y;
+document.getElementById("todaysdate").innerHTML = w + " " + d + " " + m + " " + y;
 
 
 

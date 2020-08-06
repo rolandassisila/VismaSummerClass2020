@@ -6,26 +6,72 @@
     <title>Add a post</title>
     <link rel="stylesheet" href="assets/css/postedit.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/largescreenstye.css">
+    <link rel="stylesheet" href="assets/css/mediumscreenstyle.css">
+    <link rel="stylesheet" href="assets/css/smallscreenstyle.css">
 </head>
 
 <body>
-
-    <form id="form" method="post">
-        <input type="text" id="title" placeholder="Title" />
-        <input type="text" id="content" placeholder="Content" />
-        <input type="text" id="date" placeholder="Date" />
-        <input type="text" id="tags" placeholder="Tags" />
-        <input type="text" id="author" placeholder="Author" />
-        <input type="submit" value="Add Post" />
-    </form>
-    <div class="buttons">
-        <button class="button" id="cancel" onClick="cancel()">Cancel</button>
-        <button class="button" id="update" onClick="update()">Update</button>
-        <button class="button" id="delete" onClick="deletepost()">Delete</button>
+    <header class="site-header">
+        <div class="container flex-container">
+            <nav class="main-nav-left">
+                <ul class="flex-container">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Latest</a></li>
+                    <li><a href="#">Life</a></li>
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Fashion</a></li>
+                </ul>
+            </nav>
+            <nav class="main-nav-right">
+                <ul class="flex-container">
+                    <li><a href="#"><i class="facebook"></i></a></li>
+                    <li><a href="#"><i class="twitter"></i></a></li>
+                    <li><a href="#"><i class="pinterest"></i></a></li>
+                    <li><a href="#"><i class="youtube"></i></a></li>
+                    <li class="todaysdate"><p><span id="todaysdate"></span></p></li>
+                </ul>
+            </nav>
+            <div class="dropdown">
+                <i class="burgerdropdown dropdownbars"></i>
+                <div class="dropdown-content">
+                    <a href="#">Blog</a>
+                    <a href="#">Latest</a>
+                    <a href="#">Life</a>
+                    <a href="#">Travel</a>
+                    <a href="#">Fashion</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="newPostForm">
+        <h1>Add a new Post</h1>
+        <form id="form" method="post">
+            <input type="text" id="title" placeholder="Title" required/>
+            <input type="text" id="content" placeholder="Content" required/>
+            <input type="date" id="date" placeholder="Date" required/>
+            <input type="text" id="tags" placeholder="Tags" required/>
+            <input type="text" id="author" placeholder="Author" required/>
+            <input type="submit" value="Add Post" required/>
+        </form>
+        <div class="buttons">
+            <button class="button" id="cancel" onClick="cancel()">Cancel</button>
+            <button class="button" id="update" onClick="update()">Update</button>
+            <button class="button" id="delete" onClick="deletepost()">Delete</button>
+        </div>
     </div>
+
+    <footer class="footer">
+        <div class="container flex-container">
+            <div class="footer-nav">
+                <h3>Lorem Ipsum &copy; 2020</h3>
+            </div>
+        </div>
+    </footer>
     <script src="js/storeindb.js"></script>
     <script src="js/saveEditDelete.js"></script>
-
+    <script src="js/index.js"></script>
 
 </body>
 </html>
