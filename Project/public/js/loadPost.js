@@ -55,7 +55,7 @@ async function getData() {
     for (item of data) {
         const mainPosts = document.getElementById("mainPosts");
         if (mainPosts) {
-            var html ='<div class=\"main-posts\" id=\"postForm\"><img src="/images/city-2.jpg"  onClick="showPost(' + item.id + ')" alt="#"><div class="main-posts-details"><ul class="tags">';
+            var html = '<div class=\"main-posts\" id=\"postForm\"><img src="/images/city-2.jpg"  onClick="showPost(' + item.id + ')" alt="#"><div class="main-posts-details"><ul class="tags">';
             item.postTags.forEach((postTag) => {
                 html += '<li class="zoom zoom-transition post-tags"><a href="#">' + postTag + '</a></li>'
             })
@@ -66,5 +66,4 @@ async function getData() {
         }
     }
 }
-
 getData();
