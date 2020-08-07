@@ -68,6 +68,3 @@ async function getData() {
 }
 
 getData();
-
-//
-//<ul class="tags">'+postTags.forEach((element) => {+'<li class="zoom zoom-transition"><a href="#">'+item.postTags+'</a></li>'+});+'</ul>
