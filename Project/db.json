@@ -1,25 +1,24 @@
 {
-    "posts": [
-        {
-            "title": "Lorem",
-            "content": "LoremIpsum",
-            "date": "2020-07-26",
-            "author": "Lorem1",
-            "postTags": [
-        "work",
-        "holiday"
-      ],
-            "id": 1
+  "posts": [
+    {
+      "id": 1,
+      "title": "Lorem",
+      "content": "LoremIpsum",
+      "date": "2020-07-26",
+      "author": "Lorem",
+      "postTags": [
+        "work"
+      ]
     },
-        {
-            "title": "Lorem",
-            "content": "IpsumLorem",
-            "date": "2020-07-29",
-            "author": "Lorem2",
-            "postTags": [
+    {
+      "id": 2,
+      "title": "Lorem",
+      "content": "IpsumLorem",
+      "date": "2020-07-29",
+      "author": "Lorem",
+      "postTags": [
         "leisure"
-      ],
-            "id": 2
+      ]
     }
   ]
 }

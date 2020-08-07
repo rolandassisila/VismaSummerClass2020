@@ -2,8 +2,9 @@ document.getElementById('update').style.display = "none";
 document.getElementById('delete').style.display = "none";
 
 const editedPostId = new URLSearchParams(window.location.search).get("id");
-//function saves data into db.json
+
 let form = document.getElementById('form')
+
 //function to get checked tags
 function getCheckedTags() {
     let postTags = document.getElementsByName("postTag");
@@ -16,6 +17,7 @@ function getCheckedTags() {
     return checkedTags;
 }
 
+//function saves data into db.json
 form.addEventListener('submit', function (e) {
     //auto submission prevention
 
