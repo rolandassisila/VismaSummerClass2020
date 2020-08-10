@@ -1,6 +1,7 @@
 import { Rest } from "./utils/rest.js";
+
 import { POSTS_URL, POST_URL_ID } from "./utils/constants.js"
-//function saves data into db.json
+
 let form = document.getElementById("form")
 
 let numOfPosts = [];
@@ -35,10 +36,9 @@ function addListeners() {
         let id = numOfPosts[i];
         document.getElementById("editPost-" + id).addEventListener("click", function (e) {
             return showPost(id);
-          });
+        });
     }
 }
 
 
 loadData();
-

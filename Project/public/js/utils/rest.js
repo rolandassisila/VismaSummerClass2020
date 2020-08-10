@@ -1,5 +1,4 @@
-
- export class Rest {
+export class Rest {
     static deletePost(id) {
         fetch("/posts/" + id, {
             method: "DELETE",
@@ -57,5 +56,4 @@
             });
     }
 
- }
- 
+}

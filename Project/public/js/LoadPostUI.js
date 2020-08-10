@@ -69,6 +69,7 @@ function getPost(id) {
 document.getElementById("update").addEventListener("click", function (e) {
     return update();
 });
+
 function update() {
     let updatedPost = getPost(editedPostId);
     if (updatedPost) {
@@ -81,12 +82,12 @@ function update() {
 
 document.getElementById("cancel").addEventListener("click", function (e) {
     return redirectToHomepage();
-  });
+});
 
 document.getElementById("delete").addEventListener("click", function (e) {
     Rest.deletePost(editedPostId);
     return redirectToHomepage();
-  });
+});
 
 function redirectToHomepage() {
     return window.location.replace("/index.html");
