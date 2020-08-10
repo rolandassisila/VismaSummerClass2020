@@ -1,23 +1,23 @@
 {
   "posts": [
     {
-      "title": "Lorem10",
+      "title": "Lorem122",
       "content": "IpsumLorem",
       "date": "2020-07-29",
-      "author": "Lorem10",
+      "author": "Lorem122",
       "postTags": [
-        "leisure",
         "holiday"
       ],
       "id": 2
     },
     {
-      "title": "asgasg",
+      "title": "gas",
       "content": "asg",
-      "date": "2020-08-14",
-      "author": "ags",
+      "date": "2020-08-09",
+      "author": "gas",
       "postTags": [
-        "work"
+        "work",
+        "holiday"
       ],
       "id": 3
     }

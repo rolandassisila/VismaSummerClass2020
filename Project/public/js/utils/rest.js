@@ -13,7 +13,7 @@
 
     //to get id
     static async getPost(id) {
-        let response = await fetch('/posts/' + id);
+        let response = await fetch("/posts/" + id);
         let data = response.json();
         return data;
     }
@@ -30,13 +30,13 @@
 
     //generates a new post with data from db
     static async getPosts() {
-        const response = await fetch('/posts');
+        const response = await fetch("/posts");
         const posts = await response.json();
         return posts;
     }
 
     static createPost(post) {
-        fetch(POSTS, {
+        fetch("/posts", {
                 method: "POST",
                 body: JSON.stringify({
                     title: post.title,

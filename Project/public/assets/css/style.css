@@ -107,19 +107,19 @@ p,
 }
 
 .twitter {
-    background: url(/../images/social-icons/twitter2.png) no-repeat;
+    background: url(/assets/images/social-icons/twitter2.png) no-repeat;
 }
 
 .pinterest {
-    background: url(/../images/social-icons/pinterest2.png) no-repeat;
+    background: url(/assets/images/social-icons/pinterest2.png) no-repeat;
 }
 
 .facebook {
-    background: url(/../images/social-icons/facebook2.png) no-repeat;
+    background: url(/assets/images/social-icons/facebook2.png) no-repeat;
 }
 
 .youtube {
-    background: url(/../images/social-icons/youtube2.png) no-repeat;
+    background: url(/assets/images/social-icons/youtube2.png) no-repeat;
 
 }
 
@@ -145,7 +145,7 @@ p,
 }
 
 .burgerdropdown {
-    background: url(/images/social-icons/menubars.png);
+    background: url(/assets/images/social-icons/menubars.png);
     background-repeat: no-repeat;
 }
 

@@ -1,12 +1,13 @@
 import { Rest } from "./utils/rest.js";
 
+
 const editedPostId = new URLSearchParams(window.location.search).get("id");
 
-document.getElementById('update').style.display = "none";
-document.getElementById('delete').style.display = "none";
+document.getElementById("update").style.display = "none";
+document.getElementById("delete").style.display = "none";
 
 
-form.addEventListener('submit', function (e) {
+form.addEventListener("submit", function (e) {
     //auto submission prevention
 
     e.preventDefault();
@@ -37,8 +38,8 @@ async function loadPost(postId) {
         const post = await Rest.getPost(postId)
         const form = document.getElementById("form");
 
-        document.getElementById('update').style.display = "block";
-        document.getElementById('delete').style.display = "block";
+        document.getElementById("update").style.display = "block";
+        document.getElementById("delete").style.display = "block";
 
         form["title"].value = post.title;
         form["content"].value = post.content;

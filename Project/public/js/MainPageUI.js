@@ -1,14 +1,14 @@
 import { Rest } from "./utils/rest.js";
-
+import { POSTS_URL, POST_URL_ID } from "./utils/constants.js"
 //function saves data into db.json
-let form = document.getElementById('form')
+let form = document.getElementById("form")
 
 let numOfPosts = [];
 
 function createPost(item) {
     const mainPosts = document.getElementById("mainPosts");
     if (mainPosts) {
-        var html = '<div class=\"main-posts\" id=\"postForm\"><img src="/images/city-2.jpg" id="editPost-' + item.id + '" alt="#"><div class="main-posts-details"><ul class="tags">';
+        var html = '<div class=\"main-posts\" id=\"postForm\"><img src="assets/images/city-2.jpg" id="editPost-' + item.id + '" alt="#"><div class="main-posts-details"><ul class="tags">';
         item.postTags.forEach((postTag) => {
             html += '<li class="zoom zoom-transition"><a href="#">' + postTag + '</a></li>'
         })
@@ -18,7 +18,7 @@ function createPost(item) {
 }
 
 function showPost(id) {
-    return window.location.replace("/form.html?id=" + id);
+    return window.location.replace(POST_URL_ID + id);
 }
 
 async function loadData() {
