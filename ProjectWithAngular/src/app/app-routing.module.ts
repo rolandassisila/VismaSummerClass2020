@@ -1,21 +1,17 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-import { FormComponent } from './form/form.component';
-import { BodyComponent } from './body/body.component';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 import { LifeComponent } from './life/life.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: './body', pathMatch: 'full'},
-  { path: 'body', component: BodyComponent},
+  { path: 'home', component: HomeComponent},
+  { path: 'life', component: LifeComponent},
   { path: 'form', component: FormComponent},
-  { path: 'life', component: LifeComponent}
+  { path: '',   redirectTo: '/home', pathMatch: 'full' }, 
+  // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
+
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
 
-
+export const AppRoutingModule = RouterModule.forRoot(routes);
