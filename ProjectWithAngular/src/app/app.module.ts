@@ -17,6 +17,15 @@ import { GeneralpostslifeComponent } from './components/generalpostslife/general
 import { GeneralinfoComponent } from './components/generalinfo/generalinfo.component';
 import { HeroComponent } from './components/hero/hero.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +45,11 @@ import { HeroComponent } from './components/hero/hero.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule, 
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
