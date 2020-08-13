@@ -1,0 +1,71 @@
+@media screen and (max-width: 980px) {
+    .general-posts .column-left {
+        width: auto;
+    }
+
+    .general-posts .column-right {
+        width: auto;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .main-nav-left,
+    .main-nav-right {
+        display: none;
+    }
+
+    .dropdown .dropdownbars {
+        display: block;
+    }
+
+    + .main-posts {
+        width: 100%;
+    }
+
+    .hero .container {
+        padding: 0px;
+    }
+
+    .bottom-nav-right input {
+        width: 100px
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-nav-left {
+        line-height: 1.6;
+    }
+
+    .bottom-nav-left a:hover,
+    .bottom-nav-left a:active {
+        padding: 5px;
+    }
+
+    .bottom-nav-right {
+        padding: 0px;
+    }
+
+    .holiday-posts .image-text h3,
+    .holiday-posts {
+        font-size: 1.6rem;
+    }
+
+    .holiday-posts .tags li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    .holiday-posts .holiday-post-details .image-date a {
+        font-size: 1rem;
+    }
+
+    .holiday-posts .holiday-post-details {
+        top: 50%
+    }
+}
