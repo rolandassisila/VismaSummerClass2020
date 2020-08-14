@@ -1,25 +1,25 @@
 {
-    "posts": [
-      {
-        "title": "Lorem122",
-        "content": "IpsumLorem",
-        "date": "2020-07-29",
-        "author": "Lorem122",
-        "postTags": [
-          "holiday"
-        ],
-        "id": 2
-      },
-      {
-        "title": "gas",
-        "content": "asg",
-        "date": "2020-08-09",
-        "author": "gas",
-        "postTags": [
-          "work",
-          "holiday"
-        ],
-        "id": 3
-      }
-    ]
-  }
+  "posts": [
+    {
+      "title": "Lorem122",
+      "content": "IpsumLorem",
+      "date": "2020-07-29",
+      "author": "Lorem122",
+      "postTags": [
+        "holiday"
+      ],
+      "id": 2
+    },
+    {
+      "title": "gas",
+      "content": "asg",
+      "date": "2020-08-09",
+      "author": "gas",
+      "postTags": [
+        "work",
+        "holiday"
+      ],
+      "id": 3
+    }
+  ]
+}

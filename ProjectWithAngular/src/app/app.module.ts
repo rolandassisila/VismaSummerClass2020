@@ -10,7 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainbodyComponent } from './components/mainbody/mainbody.component';
 import { LifebodyComponent } from './components/lifebody/lifebody.component';
-import { FormtemplateComponent } from './components/formtemplate/formtemplate.component';
+import { PostFormtemplateComponent } from './components/postformtemplate/postformtemplate.component';
 import { HolidaypostsComponent } from './components/holidayposts/holidayposts.component';
 import { GeneralpostshomeComponent } from './components/generalpostshome/generalpostshome.component';
 import { GeneralpostslifeComponent } from './components/generalpostslife/generalpostslife.component';
@@ -25,6 +25,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './components/post/post.component';
+import { AllpostsComponent } from './components/allposts/allposts.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,14 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     MainbodyComponent,
     LifebodyComponent,
-    FormtemplateComponent,
+    PostFormtemplateComponent,
     HolidaypostsComponent,
     GeneralpostshomeComponent,
     GeneralpostslifeComponent,
     GeneralinfoComponent,
-    HeroComponent
+    HeroComponent,
+    PostComponent,
+    AllpostsComponent
   ],
   imports: [
     BrowserModule,

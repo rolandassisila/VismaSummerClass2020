@@ -1,6 +1,6 @@
 <div class="newPostForm">
     <h1>Add a new Post</h1>
-    <form id="form" method="post" [formGroup]="myForm">
+    <form id="form" method="post" [formGroup]="myForm" (ngSubmit)="onSubmit()">
         value: {{ myForm.value | json }}
         <input type="text" formControlName="title" id="title" placeholder="Title" required />
         <input type="text" formControlName="content" id="content" placeholder="Content" required />
@@ -14,12 +14,10 @@
             <label for="Holiday">Holiday</label>
         </div>
         <input type="text" formControlName="author" id="author" placeholder="Author" required />
-        <input type="submit" value="Add Post" required />
+        <button type="submit">Submit</button>
 
     </form>
     <div class="buttons">
         <button class="button" id="cancel" routerLink="/home">Cancel</button>
-        <button class="button" id="update">Update</button>
-        <button class="button" id="delete">Delete</button>
     </div>
 </div>
