@@ -6,6 +6,7 @@
       "date": "2020-07-29",
       "author": "Lorem122",
       "postTags": [
+        "holiday",
         "holiday"
       ],
       "id": 2
@@ -20,6 +21,22 @@
         "holiday"
       ],
       "id": 3
+    },
+    {
+      "title": "asgasgasg",
+      "content": "asgasgasgasg",
+      "author": "asgasgasgasg",
+      "date": "2020-08-16",
+      "tags": [],
+      "id": 4
+    },
+    {
+      "title": "hgasha",
+      "content": "hasashash",
+      "author": "hasashash",
+      "date": "2020-08-16",
+      "tags": [],
+      "id": 5
     }
   ]
 }

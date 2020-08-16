@@ -45,8 +45,8 @@ import { AllpostsComponent } from './components/allposts/allposts.component';
     GeneralinfoComponent,
     HeroComponent,
     PostComponent,
-    AllpostsComponent
-  ],
+    AllpostsComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

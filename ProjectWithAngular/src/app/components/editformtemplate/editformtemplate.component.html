@@ -1,9 +1,11 @@
+<p>editformtemplate works!</p>
 <div class="newPostForm">
     <h1>Add a new Post</h1>
     <form id="form" method="post" [formGroup]="myForm" (ngSubmit)="onSubmit()">
         value: {{ myForm.value | json }}
         <input type="text" formControlName="title" id="title" placeholder="Title" required />
         <input type="text" formControlName="content" id="content" placeholder="Content" required />
+        <input type="date" formControlName="date" id="date" placeholder="Date" required />
         <div class="radioButtons">
             <input type="checkbox" value="work" id="work" name="postTag" />
             <label for="Work">Work Trip</label>
@@ -13,10 +15,12 @@
             <label for="Holiday">Holiday</label>
         </div>
         <input type="text" formControlName="author" id="author" placeholder="Author" required />
-        <button class="button" type="submit">Submit</button>
+        <button type="submit">Submit</button>
 
     </form>
     <div class="buttons">
+        <button class="button" id="update" routerLink="/home">Update</button>
         <button class="button" id="cancel" routerLink="/home">Cancel</button>
+        <button class="button" id="delete" routerLink="/home">Delete</button>
     </div>
 </div>

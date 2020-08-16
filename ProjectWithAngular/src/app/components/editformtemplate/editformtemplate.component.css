@@ -11,7 +11,7 @@
     max-width: 500px;
 }
 
-.button {
+input {
     width: 100%;
     box-sizing: border-box;
     font-size: 0.9em;
@@ -28,18 +28,33 @@
 }
 
 .buttons,
-.radioButtons{
+.radioButtons {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 15px;
 }
 
-.buttons #cancel, .buttons #submit {
+.buttons #cancel {
     background-color: #888888;
     width: 150px;
     height: 50px;
     border-radius: 5px;
+}
+
+.buttons #delete,
+.buttons #update {
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.buttons #update {
+    background-color: #5086b4;
+}
+
+.buttons #delete {
+    background-color: #ad0d0d;
 }
 
 .button:hover {

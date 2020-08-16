@@ -1,0 +1,45 @@
+.main-posts-details {
+    display: block;
+    position: absolute;
+    width: 400px;
+    padding-left: 20px;
+}
+
+.main-posts img {
+    max-width: 35%;
+}
+
+.main-posts {
+    padding-top: 40px;
+}
+
+.main-posts .main-posts-details {
+    display: inline-block;
+    max-width: 60%;
+}
+
+.tags li {
+    display: inline-block;
+    background: #ad0d0d;
+    padding: 4px 10px;
+    margin: 2px;
+}
+
+.tags li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-posts-details a {
+    color: #000;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    .latest-posts img {
+        max-width: 45%;
+    }
+    .main-posts .main-posts-details {
+        max-width: 50%;
+    }
+}
