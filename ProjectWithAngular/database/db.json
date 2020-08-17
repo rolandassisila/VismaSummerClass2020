@@ -1,42 +1,28 @@
 {
   "posts": [
     {
-      "title": "Lorem122",
+      "title": "Lorem12232323232323123123123",
       "content": "IpsumLorem",
-      "date": "2020-07-29",
       "author": "Lorem122",
-      "postTags": [
-        "holiday",
-        "holiday"
-      ],
+      "date": "2020-08-17",
+      "tags": "",
       "id": 2
     },
     {
-      "title": "gas",
+      "title": "gas123125125",
       "content": "asg",
-      "date": "2020-08-09",
       "author": "gas",
-      "postTags": [
-        "work",
-        "holiday"
-      ],
+      "date": "2020-08-17",
+      "tags": "",
       "id": 3
     },
     {
-      "title": "asgasgasg",
-      "content": "asgasgasgasg",
-      "author": "asgasgasgasg",
-      "date": "2020-08-16",
-      "tags": [],
+      "title": "agsasg23456",
+      "content": "asgasga",
+      "author": "asgasga",
+      "date": "2020-08-17",
+      "tags": "",
       "id": 4
-    },
-    {
-      "title": "hgasha",
-      "content": "hasashash",
-      "author": "hasashash",
-      "date": "2020-08-16",
-      "tags": [],
-      "id": 5
     }
   ]
 }

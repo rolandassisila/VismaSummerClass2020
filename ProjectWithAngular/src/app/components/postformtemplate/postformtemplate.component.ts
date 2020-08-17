@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Post } from '../../utils/formcontent';
 import { Router } from '@angular/router';
 import { FormComponent } from '../../form/form.component';
+import { todaysDate } from '../../utils/helpers';
+
 
 
 @Component({
@@ -44,7 +46,7 @@ export class PostFormtemplateComponent implements OnInit {
       title: this.myForm.controls.title.value,
       content: this.myForm.controls.content.value,
       author: this.myForm.controls.content.value,
-      date: new Date().toLocaleDateString('LT'),
+      date: todaysDate,
       tags: [],
       id: null
     };

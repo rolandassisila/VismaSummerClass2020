@@ -16,6 +16,8 @@ import { GeneralpostshomeComponent } from './components/generalpostshome/general
 import { GeneralpostslifeComponent } from './components/generalpostslife/generalpostslife.component';
 import { GeneralinfoComponent } from './components/generalinfo/generalinfo.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { EditformComponent } from './editform/editform.component';
+import { PostedittemplateComponent } from './components/postedittemplate/postedittemplate.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +29,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './components/post/post.component';
 import { AllpostsComponent } from './components/allposts/allposts.component';
+
+
 
 @NgModule({
   declarations: [
@@ -46,6 +50,8 @@ import { AllpostsComponent } from './components/allposts/allposts.component';
     HeroComponent,
     PostComponent,
     AllpostsComponent,
+    EditformComponent,
+    PostedittemplateComponent,
     ],
   imports: [
     BrowserModule,

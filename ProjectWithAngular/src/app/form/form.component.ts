@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DATABASE_URL, SELECTED_POST_ID } from '../utils/url';
+import { DATABASE_URL} from '../utils/url';
 import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { Injectable } from '@angular/core';
@@ -28,23 +28,42 @@ export class FormComponent {
 
   constructor(private httpClient: HttpClient) {}
   
-  getPosts(): Observable<Post[]> {
+  private handleError(error: HttpResponse<Error>) {
+    return throwError(error);
+  }
+
+  public getPosts(): Observable<Post[]> {
     return this.httpClient.get<Post[]>(this.DatabaseURL)
     .pipe(
       catchError(this.handleError)
     )
   }
 
-
-
-  createPost(post): Observable<Post> {
+  public createPost(post): Observable<Post> {
     return this.httpClient.post<Post>(this.DatabaseURL, JSON.stringify(post), this.options)
     .pipe(
       catchError(this.handleError)
     )
   } 
 
-  private handleError(error: HttpResponse<Error>) {
-    return throwError(error);
+  public deletePost(id){
+  return this.httpClient.delete<Post>(this.DatabaseURL + `/${id}`, this.options)
+    .pipe(
+      catchError(this.handleError)
+      )
+}
+
+public getPost(id): Observable<Post> {
+  return this.httpClient.get<Post>(this.DatabaseURL + `/${id}`)
+    .pipe(
+      catchError(this.handleError)
+      )
+}
+
+public updatePost(id, post): Observable<Post> {
+  return this.httpClient.put<Post>(this.DatabaseURL + `/${id}`, JSON.stringify(post), this.options)
+    .pipe(
+      catchError(this.handleError)
+      )
 }
 }
