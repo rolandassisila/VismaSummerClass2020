@@ -1,28 +1,14 @@
 {
   "posts": [
     {
-      "title": "Lorem12232323232323123123123",
-      "content": "IpsumLorem",
-      "author": "Lorem122",
-      "date": "2020-08-17",
-      "tags": "",
-      "id": 2
-    },
-    {
-      "title": "gas123125125",
-      "content": "asg",
-      "author": "gas",
-      "date": "2020-08-17",
-      "tags": "",
-      "id": 3
-    },
-    {
-      "title": "agsasg23456",
-      "content": "asgasga",
-      "author": "asgasga",
-      "date": "2020-08-17",
-      "tags": "",
-      "id": 4
+      "title": "12213",
+      "content": "12312312",
+      "author": "123123213",
+      "date": "2020-08-18",
+      "tags": [
+        "Leisure"
+      ],
+      "id": 1
     }
   ]
 }

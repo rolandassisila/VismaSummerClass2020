@@ -3,7 +3,7 @@ export interface Post {
     content: string;
     date: string;
     author: string;
-    tags: string[];
+    tags: Array<string>;
     id: number;
 
   }

@@ -4,17 +4,15 @@
         <input type="text" formControlName="title" id="title" placeholder="Title" required />
         <input type="text" formControlName="content" id="content" placeholder="Content" required />
         <div class="radioButtons">
-            <input type="checkbox" value="work" id="work" name="postTag" />
-            <label for="Work">Work Trip</label>
-            <input type="checkbox" value="leisure" id="leisure" name="postTag" />
-            <label for="Leisure">Leisure</label>
-            <input type="checkbox" value="holiday" id="holiday" name="postTag" />
-            <label for="Holiday">Holiday</label>
+            <label *ngFor="let singletag of tags; let i = index">
+                <input type="checkbox" [value]="singletag.value" (change)="onCheckboxChange($event)" [checked]="editPost.get('tags').value.includes(singletag.value)"/>
+                {{ singletag.name }}
+            </label>
         </div>
         <input type="text" formControlName="author" id="author" placeholder="Author" required />
     </form>
     <div class="buttons">
-        <button class="button" id="update" (click)="updatePost()">Update</button>
+        <button class="button" id="update" (click)="updatePost()" >Update</button>
         <button class="button" id="cancel" routerLink="/home">Cancel</button>
         <button class="button" id="delete" (click)="deletePost()">Delete</button>
     </div>

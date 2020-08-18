@@ -1,8 +1,8 @@
 <div class="main-posts" id="postForm">
     <img src="../../../assets/images/city-2.jpg" alt="#" (click)="editForm()">
     <div class="main-posts-details">
-        <ul class="tags">
-            <li class="zoom zoom-transition"><a href="#">tag</a></li>
+        <ul class="tags zoom zoom-transition" *ngFor="let tag of post.tags; let i=index">
+            <li><a href="#">{{ post.tags[i] }}</a></li>
         </ul>
     <div class="latest-posts-topic">
         <h1> {{ post.title }} </h1>

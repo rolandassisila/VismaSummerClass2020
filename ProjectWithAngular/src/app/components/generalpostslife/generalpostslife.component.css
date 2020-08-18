@@ -1,0 +1,162 @@
+/*LEFT COLUMN*/
+.general-posts .column-left h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+.general-posts .column-left span {
+    background: #fff;
+    padding: 0px 40px;
+}
+
+.container-header {
+    padding-top: 20px;
+}
+
+.general-posts .column-left {
+    width: 65%;
+    padding: 0px 0px 30px 0px;
+}
+
+.column-left .button {
+    border: none;
+    background-color: #ad0d0d;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    left: 80%;
+}
+
+.column-left .button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*POSTS - RIGHT COLUMN */
+.general-posts .column-right {
+    width: 35%;
+    padding: 0px 30px 0px 60px;
+}
+
+.column-right .latest-posts {
+    padding: 10px 0px 10px 0px;
+}
+
+.column-right .latest-posts img {
+    max-width: 65%;
+}
+
+.column-right .latest-posts .latest-posts-details {
+    display: inline-block;
+    width: 150px;
+    position: absolute;
+    padding-left: 20px;
+}
+
+.column-right .latest-posts .latest-posts-details a {
+    text-decoration: none;
+    color: #000;
+}
+
+.column-right .latest-posts::before {
+    content: 'New post!';
+    display: block;
+    background-color: #000;
+    color: #fff;
+    width: 70px;
+    border-radius: 0px 5px;
+    padding: 0 1px 0 1px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    position: absolute;
+}
+
+.column-right .latest-posts {
+    position: relative;
+}
+
+/*POST CSS*/
+.main-posts-details {
+    display: block;
+    position: absolute;
+    width: 400px;
+    padding-left: 20px;
+}
+
+.main-posts img {
+    max-width: 35%;
+}
+
+.main-posts {
+    padding-top: 40px;
+}
+
+.main-posts .main-posts-details {
+    display: inline-block;
+    max-width: 60%;
+}
+
+.tags li {
+    display: inline-block;
+    background: #ad0d0d;
+    padding: 4px 10px;
+    margin: 2px;
+}
+
+.tags li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-posts-details a {
+    color: #000;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    .latest-posts img {
+        max-width: 45%;
+    }
+    .main-posts .main-posts-details {
+        max-width: 50%;
+    }
+}
+/*RESPONSIVE*/
+
+@media screen and (max-width: 980px) {
+    .general-posts .column-left {
+        width: auto;
+    }
+
+    .general-posts .column-right {
+        width: auto;
+    }
+    .main-posts {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .column-left .main-posts img {
+        max-width: 45%;
+    }
+
+    .column-left .main-posts .main-posts-details {
+        max-width: 50%;
+    }
+
+    .column-left .main-posts {
+        padding-bottom: 60px
+    }
+}
+@media screen and (max-width: 460px) {
+
+.column-left .latest-posts-topic,
+.column-left .latest-posts-date {
+    font-size: 0.6rem
+}
+}
