@@ -8,8 +8,6 @@ import { LifeComponent } from './life/life.component';
 import { FormComponent } from './form/form.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MainbodyComponent } from './components/mainbody/mainbody.component';
-import { LifebodyComponent } from './components/lifebody/lifebody.component';
 import { PostFormtemplateComponent } from './components/postformtemplate/postformtemplate.component';
 import { HolidaypostsComponent } from './components/holidayposts/holidayposts.component';
 import { GeneralpostshomeComponent } from './components/generalpostshome/generalpostshome.component';
@@ -40,8 +38,6 @@ import { AllpostsComponent } from './components/allposts/allposts.component';
     FormComponent,
     HeaderComponent,
     FooterComponent,
-    MainbodyComponent,
-    LifebodyComponent,
     PostFormtemplateComponent,
     HolidaypostsComponent,
     GeneralpostshomeComponent,
