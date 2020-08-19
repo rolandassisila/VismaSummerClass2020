@@ -10,7 +10,7 @@ import { todaysDate } from '../../utils/helpers';
 @Component({
   selector: 'app-postformtemplate',
   templateUrl: './postformtemplate.component.html',
-  styleUrls: ['./postformtemplate.component.css']
+  styleUrls: ['./postformtemplate.component.scss']
 })
 export class PostFormtemplateComponent implements OnInit {
   

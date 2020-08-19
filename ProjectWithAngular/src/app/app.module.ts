@@ -30,6 +30,7 @@ import { AllpostsComponent } from './components/allposts/allposts.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -9,7 +9,7 @@ import { todaysDate } from '../../utils/helpers';
 @Component({
   selector: 'app-postedittemplate',
   templateUrl: './postedittemplate.component.html',
-  styleUrls: ['./postedittemplate.component.css']
+  styleUrls: ['./postedittemplate.component.scss']
 })
 export class PostedittemplateComponent implements OnInit {
 

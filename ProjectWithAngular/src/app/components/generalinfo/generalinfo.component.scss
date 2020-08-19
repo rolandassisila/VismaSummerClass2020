@@ -1,0 +1,42 @@
+.general-info {
+	background-color: #cbcbcb;
+	display: flex;
+	.column {
+		padding: 40px;
+		ul {
+			text-align: none;
+			line-height: 1.8;
+		}
+		li {
+			a {
+				text-decoration: none;
+				color: #000;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		h2 {
+			text-align: left;
+		}
+	}
+}
+#bottom-searchbar {
+	max-width: 100px;
+}
+.column {
+	li {
+		input {
+			text-decoration: none;
+			color: #000;
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.general-info {
+		.column {
+			width: 100%;
+			padding: 20px;
+		}
+	}
+}

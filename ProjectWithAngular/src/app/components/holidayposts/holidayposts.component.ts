@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-holidayposts',
   templateUrl: './holidayposts.component.html',
-  styleUrls: ['./holidayposts.component.css']
+  styleUrls: ['./holidayposts.component.scss']
 })
 export class HolidaypostsComponent implements OnInit {
 

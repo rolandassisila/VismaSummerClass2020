@@ -1,0 +1,75 @@
+.holiday-posts {
+	.section-content {
+		img {
+			max-width: 100%;
+		}
+	}
+	.tags {
+		li {
+			display: inline-block;
+			background: #ad0d0d;
+			padding: 4px 8px;
+			margin: 2px;
+			a {
+				text-decoration: none;
+				color: #fff;
+				font-size: 0.8rem;
+			}
+		}
+	}
+	.image-text {
+		h3 {
+			font-size: 1rem;
+		}
+	}
+	font-size: 1rem;
+	.holiday-post-details {
+		display: block;
+		position: absolute;
+		max-width: auto;
+		top: 50%;
+		color: #fff;
+		padding-left: 20px;
+		line-height: 0.5em;
+		.image-date {
+			a {
+				font-size: 0.8rem;
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+	.holiday-image {
+		position: relative;
+	}
+}
+.holiday-image {
+	padding: 10px;
+}
+@media screen and (max-width: 980px) {
+	.holiday-posts {
+		.image-text {
+			h3 {
+				font-size: 1.6rem;
+			}
+		}
+		font-size: 1.6rem;
+		.tags {
+			li {
+				a {
+					text-decoration: none;
+					color: #fff;
+					font-size: 1rem;
+				}
+			}
+		}
+		.holiday-post-details {
+			.image-date {
+				a {
+					font-size: 1rem;
+				}
+			}
+			top: 50%;
+		}
+	}
+}

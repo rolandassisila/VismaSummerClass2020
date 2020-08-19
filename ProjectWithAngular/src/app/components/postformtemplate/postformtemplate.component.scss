@@ -1,0 +1,59 @@
+.newPostForm {
+	padding: 2em;
+	margin: auto;
+	max-width: 30em;
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+#form {
+	max-width: 500px;
+}
+.button {
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 0.9em;
+	margin: 0.4em;
+	padding: 0.5em;
+	&:hover {
+		cursor: hover;
+	}
+}
+.contact-table {
+	margin-top: 2em;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid;
+	text-align: left;
+}
+.buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 15px;
+	#cancel {
+		background-color: #888888;
+		width: 150px;
+		height: 50px;
+		border-radius: 5px;
+	}
+	#submit {
+		background-color: #888888;
+		width: 150px;
+		height: 50px;
+		border-radius: 5px;
+	}
+}
+.radioButtons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 15px;
+}
+input {
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 0.9em;
+	margin: 0.4em;
+	padding: 0.5em;
+}

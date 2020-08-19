@@ -5,7 +5,7 @@ import { FormComponent } from '../../form/form.component';
 @Component({
   selector: 'app-allposts',
   templateUrl: './allposts.component.html',
-  styleUrls: ['./allposts.component.css']
+  styleUrls: ['./allposts.component.scss']
 })
 export class AllpostsComponent implements OnInit {
 
