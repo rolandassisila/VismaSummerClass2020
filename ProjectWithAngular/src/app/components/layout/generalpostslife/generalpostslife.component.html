@@ -1,0 +1,42 @@
+<section class="general-posts">
+    <div class="container flex-container">
+        <div class="row">
+            <div class="column-left">
+                <div class="container-header">
+                    <h2><span>Lorem Ipsum</span></h2>
+                </div>
+                <button class="button zoom zoom-transition" routerLink="/form">Add Post</button>
+                
+                <div class="main-posts" *ngFor="let lifepost of lifeposts; let i = index">
+                    <img src="{{ lifepost.imgsrc }}" alt="{{ lifepost.alt }}">
+                    <div class="main-posts-details" >
+                        <ul class="tags">
+                            <li class="zoom zoom-transition" *ngFor="let tag of lifeposttags"><a href="#">{{tag.name}}</a></li>
+                        </ul>
+                        <div class="latest-posts-topic">
+                            <h3>{{ lifepost.topic }}</h3>
+                        </div>
+                        <div class="latest-posts-date">
+                            <a href="#"><span class="post-date"></span>{{ lifepost.postdate }}</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column-right">
+                <h2>Lorem Ipsum</h2>
+                <div class="latest-posts" *ngFor="let latestpost of latestposts; let i = index">
+                    <img src="{{ latestpost.imgsrc }}" alt="{{ latestpost.alt }}">
+                    <div class="latest-posts-details">
+                        <div class="latest-posts-topic">
+                            <h3>{{ latestpost.topic }}</h3>
+                        </div>
+                        <div class="latest-posts-date">
+                            <a href="#"><span class="post-date"></span>{{ latestpost.postdate }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

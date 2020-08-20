@@ -1,8 +1,10 @@
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { LifeComponent } from './life/life.component';
-import { FormComponent } from './form/form.component';
-import { EditformComponent } from './editform/editform.component';
+import { NgModule } from '@angular/core';
+
+import { HomeComponent } from './pages/home/home.component';
+import { LifeComponent } from './pages/life/life.component';
+import { FormComponent } from './pages/form/form.component';
+import { EditformComponent } from './pages/editform/editform.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},

@@ -1,0 +1,23 @@
+    <header class="site-header">
+        <div class="container flex-container">
+            <nav class="main-nav-left">
+                <ul class="flex-container">
+                    <li *ngFor="let topnav of topnavs; let i = index"><a routerLink="{{topnav.routerLink}}">{{ topnav.name }}</a></li>
+                </ul>
+            </nav>
+            <nav class="main-nav-right">
+                <ul class="flex-container">
+                    <li *ngFor="let sprite of sprites; let i = index"><a routerLink="{{sprite.routerLink}}"><i class="{{ sprite.class }}"></i></a></li>
+                    <li class="todaysdate">
+                        <p><span id="todaysdate">{{ currentDate }}</span></p>
+                    </li>
+                </ul>
+            </nav>
+            <div class="dropdown">
+                <i class="burgerdropdown dropdownbars"></i>
+                <div class="dropdown-content">
+                    <a *ngFor="let topnav of topnavs; let i = index" routerLink="{{topnav.routerLink}}">{{ topnav.name }}</a>
+                </div>
+            </div>
+        </div>
+    </header>
