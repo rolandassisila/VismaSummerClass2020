@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, Form, FormControl, FormArray } from '@angular/forms';
-import { Post } from '../../../utils/formcontent';
+import { Post } from '../../../utils/post.interface';
 import { ActivatedRoute } from '@angular/router';
 import { RestService } from '../../../utils/post-rest/rest.service';
 import { Router } from '@angular/router';
 import { todaysDate } from '../../../utils/helpers';
+
+import * as postActions from './../../../state/post.actions';
+import * as fromPost from './../../../state/post.reducer';
+import { Store } from "@ngrx/store";
 
 @Component({
   selector: 'app-postedittemplate',
@@ -22,7 +26,9 @@ export class PostedittemplateComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private activatedRoute: ActivatedRoute,
     private rest: RestService,
-    private router: Router) { }
+    private router: Router,
+    private store: Store<fromPost.AppState>
+    ) { }
 
   public post: Post;
   private id = this.activatedRoute.snapshot.params['id'];
@@ -34,6 +40,8 @@ export class PostedittemplateComponent implements OnInit {
   });
 
   ngOnInit() {
+
+    
     this.rest.getPost(this.id).subscribe((data: Post) => {
       this.post = data;
       this.editPost.patchValue({
@@ -49,11 +57,16 @@ export class PostedittemplateComponent implements OnInit {
   }
 
 
-  deletePost(){
-    this.rest.deletePost(this.id).subscribe(data => {
-      this.router.navigate(['/home']);
-    })
+
+
+  deletePost(post: Post) {
+    if (confirm("Are You Sure You want to Delete the Post?")) {
+      this.store.dispatch(new postActions.DeletePost(post.id));
+    }
+    this.router.navigate(['/home']);
   }
+
+ 
 
   updatePost() {
     const editedPost: Post = {
@@ -65,9 +78,9 @@ export class PostedittemplateComponent implements OnInit {
       id: this.post.id
     };
 
-    this.rest.updatePost(this.id, editedPost).subscribe(data => {
+    this.store.dispatch(new postActions.UpdatePost(editedPost))
       this.router.navigate(['/home']);
-    })
+    
   }
   onCheckboxChange(e) {
     const tagsArray: FormArray = this.editPost.get('tags') as FormArray;

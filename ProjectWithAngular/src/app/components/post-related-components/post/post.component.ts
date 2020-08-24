@@ -1,7 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Post } from '../../../utils/formcontent';
+import { Post } from '../../../utils/post.interface';
 import { Router } from '@angular/router';
 
+import * as postActions from './../../../state/post.actions';
+import * as fromPost from './../../../state/post.reducer';
+import { Store} from "@ngrx/store";
 
 @Component({
   selector: 'app-post',
@@ -11,13 +14,16 @@ import { Router } from '@angular/router';
 export class PostComponent implements OnInit {
 
   @Input() post: Post
-  constructor( private router: Router) { }
+  constructor( private router: Router,
+    private store: Store<fromPost.AppState>
+    ) { }
 
   ngOnInit(): void {
   }
 
-  editForm() {
+
+  editForm (post: Post) {
+    this.store.dispatch(new postActions.LoadPost(post.id));
     this.router.navigateByUrl(`/edit/${this.post.id}`);
   }
-
 }

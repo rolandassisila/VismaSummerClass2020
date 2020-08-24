@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormArray, FormControl, ReactiveFormsModule, FormsModule, Validators } from '@angular/forms';
-import { Post } from '../../../utils/formcontent';
+import { Post } from '../../../utils/post.interface';
 import { Router } from '@angular/router';
 import { RestService } from '../../../utils/post-rest/rest.service';
 import { todaysDate } from '../../../utils/helpers';
 import { WidespreadsService } from './../../../utils/widespread-application/widespreads.service';
 
+import * as postActions from './../../../state/post.actions';
+import * as fromPost from './../../../state/post.reducer';
+import { Store } from "@ngrx/store";
 
 @Component({
   selector: 'app-postformtemplate',
@@ -33,7 +36,8 @@ export class PostFormtemplateComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     public rest: RestService,
-    private router: Router
+    private router: Router,
+    private store: Store<fromPost.AppState>
     ) {  }
 
     onCheckboxChange(e) {
@@ -61,10 +65,9 @@ export class PostFormtemplateComponent implements OnInit {
       tags: this.myForm.controls.tags.value,
       id: null
     };
-  
 
-      this.rest.createPost(post).subscribe(res => {
+    this.store.dispatch(new postActions.AddPost(post));
         this.router.navigateByUrl("/");
-    })
+    
   }
 }

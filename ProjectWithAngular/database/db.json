@@ -1,24 +1,28 @@
 {
   "posts": [
     {
-      "title": "12213",
-      "content": "12312312",
-      "author": "123123213",
-      "date": "8/20/2020",
+      "title": "Test122223",
+      "content": "TEST12",
+      "author": "RW",
+      "date": "8/24/2020",
       "tags": [
+        "Work",
+        "Leisure",
         "Holiday"
       ],
-      "id": 1
+      "id": 3
     },
     {
-      "title": "SFASF",
-      "content": "ASFASF",
-      "author": "asg",
-      "date": "8/20/2020",
+      "title": "gasgas",
+      "content": "sagasgas",
+      "author": "gasagsas",
+      "date": "8/24/2020",
       "tags": [
-        "Work"
+        "Work",
+        "Leisure",
+        "Holiday"
       ],
-      "id": 2
+      "id": 4
     }
   ]
 }
