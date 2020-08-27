@@ -1,11 +1,9 @@
 import { Injectable } from "@angular/core";
-import { Actions, Effect, ofType } from "@ngrx/effects";
-import { Action } from "@ngrx/store";
-import { Observable, of } from "rxjs";
-import { map, mergeMap, catchError } from "rxjs/operators";
-import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
-import { throwError } from 'rxjs';
-
+import { Actions, ofType, createEffect } from "@ngrx/effects";
+import {  of } from "rxjs";
+import { map, mergeMap, catchError, tap, concatMap } from "rxjs/operators";
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { RestService } from "./../utils/post-rest/rest.service";
 import * as postActions from "../state/post.actions";
 import { Post } from '../utils/post.interface'
@@ -17,95 +15,76 @@ export class PostEffects {
   constructor(
     private actions$: Actions,
     private restService: RestService,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private router: Router
   ) {}
 
-  public handleError(error: HttpResponse<Error>) {
-    return throwError(error);
-  }
 
-  @Effect()
-  loadPosts$: Observable<Action> = this.actions$.pipe(
-    ofType<postActions.LoadPosts>(
-      postActions.PostActionTypes.LOAD_POSTS
-    ),
-    mergeMap((action: postActions.LoadPosts) =>
-      this.restService.getPosts().pipe(
-        map(
-          (posts: Post[]) =>
-            new postActions.LoadPostsSuccess(posts)
-        ),
-        catchError(err => of(new postActions.LoadPostsFail(err)))
+  getPosts$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(postActions.GetPosts),
+      mergeMap(() =>
+        this.restService.getPosts().pipe(
+          map((posts: Post[]) => postActions.GetPostsSuccess({ posts })),
+          catchError((error) => of(postActions.GetPostsFail({ error })))
+        )
       )
     )
   );
 
 
-  @Effect()
-  loadPost$: Observable<Action> = this.actions$.pipe(
-    ofType<postActions.LoadPost>(
-      postActions.PostActionTypes.LOAD_POST
-    ),
-    mergeMap((action: postActions.LoadPost) =>
-      this.restService.getPostById(action.payload).pipe(
-        map(
-          (post: Post) =>
-            new postActions.LoadPostSuccess(post)
-        ),
-        catchError(err => of(new postActions.LoadPostFail(err)))
-      )
-    )
-  );
-
-  @Effect()
-  addPost$: Observable<Action> = this.actions$.pipe(
-    ofType<postActions.AddPost>(
-      postActions.PostActionTypes.ADD_POST
-    ),
-    map((action: postActions.AddPost) => action.payload),
-    mergeMap((post: Post) =>
-      this.restService.createPost(post).pipe(
-        map(
-          (newPost: Post) =>
-            new postActions.AddPostSuccess(newPost)
-        ),
-        catchError(err => of(new postActions.AddPostFail(err)))
+  getPost$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(postActions.GetPost),
+      mergeMap((action) =>
+        this.restService.getPost(action.id).pipe(
+          map((post: Post) =>
+            postActions.GetPostSuccess({
+              selectedPost: post,
+            })
+          ),
+          catchError((error) => of(postActions.GetPostFail({ error })))
+        )
       )
     )
   );
 
 
-  @Effect()
-  updatePost$: Observable<Action> = this.actions$.pipe(
-    ofType<postActions.UpdatePost>(
-      postActions.PostActionTypes.UPDATE_POST
-    ),
-    map((action: postActions.UpdatePost) => action.payload),
-    mergeMap((post: Post) =>
-    this.restService.updatePost(post).pipe(
-      map(
-        (updatePost: Post) =>
-          new postActions.UpdatePostSuccess({
-            id: updatePost.id,
-            changes: updatePost
-          })
+ createPost$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(postActions.CreatePost),
+      mergeMap((action) =>
+        this.restService.addPost(action.post).pipe(
+          map((post: Post) => postActions.CreatePostSuccess({ post })),
+          catchError((error) => of(postActions.CreatePostFail({ error })))
+        )
       ),
-      catchError(err => of(new postActions.UpdatePostFail(err)))
-  )
-)
-);
+      tap(() => this.router.navigateByUrl('/'))
+    )
+  );
 
-  @Effect()
-  deletePost$: Observable<any> = this.actions$.pipe(
-    ofType<postActions.DeletePost>(
-      postActions.PostActionTypes.DELETE_POST
-    ),
-    map((action: postActions.DeletePost) => action.payload),
-    mergeMap((id: number) =>
-      this.restService.deletePost(id).pipe(
-        map(() => new postActions.DeletePostSuccess(id)),
-        catchError(err => of(new postActions.DeletePostFail(err)))
-      )
+  updatePost$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType(postActions.UpdatePost),
+        concatMap((action) =>
+          this.restService.updatePost(action.post.changes)
+        ),
+        tap(() => this.router.navigateByUrl('/'))
+      ),
+    { dispatch: false }
+  );
+
+  deletePost$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(postActions.DeletePost),
+      mergeMap((action) =>
+        this.restService.deletePost(action.id).pipe(
+          map(() => postActions.DeletePostSuccess({ id: action.id })),
+          catchError((error) => of(postActions.DeletePostFail({ error })))
+        )
+      ),
+      tap(() => this.router.navigateByUrl('/'))
     )
   );
 }

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import * as postActions from './../../../state/post.actions';
 import * as fromPost from './../../../state/post.reducer';
 import { Store} from "@ngrx/store";
+import { AppState } from './../../../app-state/app-state';
 
 @Component({
   selector: 'app-post',
@@ -15,7 +16,7 @@ export class PostComponent implements OnInit {
 
   @Input() post: Post
   constructor( private router: Router,
-    private store: Store<fromPost.AppState>
+    private store: Store<AppState>
     ) { }
 
   ngOnInit(): void {
@@ -23,7 +24,7 @@ export class PostComponent implements OnInit {
 
 
   editForm (post: Post) {
-    this.store.dispatch(new postActions.LoadPost(post.id));
+    this.store.dispatch(postActions.GetPost({id: post.id}));
     this.router.navigateByUrl(`/edit/${this.post.id}`);
   }
 }
