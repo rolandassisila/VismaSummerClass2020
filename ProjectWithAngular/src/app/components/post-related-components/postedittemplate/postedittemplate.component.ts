@@ -19,6 +19,9 @@ import * as fromPost from './../../../store/post.reducer';
 import { Store } from '@ngrx/store';
 import { Update } from '@ngrx/entity';
 import { Observable } from 'rxjs';
+import { filter, map, take } from 'rxjs/operators';
+import { Actions, ofType } from '@ngrx/effects';
+
 @Component({
   selector: 'app-postedittemplate',
   templateUrl: './postedittemplate.component.html',
@@ -36,7 +39,8 @@ export class PostedittemplateComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private rest: RestService,
     private router: Router,
-    private store: Store<AppState>
+    private store: Store<AppState>,
+    private actions$: Actions
   ) {}
 
   public post: Post;
@@ -49,9 +53,12 @@ export class PostedittemplateComponent implements OnInit {
     const post$: Observable<Post> = this.store.select(
       fromPostSelectors.selectedPost
     );
-    post$.subscribe((currentPost$) => {
-      this.fillForm(currentPost$);
-    });
+
+    this.actions$
+      .pipe(ofType(postActions.GetPostSuccess), take(1))
+      .subscribe(({ selectedPost }) => {
+        this.fillForm(selectedPost);
+      });
   }
 
   private generateForm(): FormGroup {
@@ -65,7 +72,6 @@ export class PostedittemplateComponent implements OnInit {
 
   private fillForm(post: Post): void {
     const tags: FormArray = this.postForm.get('tags') as FormArray;
-    console.log(post.tags);
     post.tags.forEach((singletag) => {
       tags.push(new FormControl(singletag));
     });
@@ -74,14 +80,17 @@ export class PostedittemplateComponent implements OnInit {
     this.postForm.get('content').setValue(post.content);
   }
 
-  deletePost(post: Post) {
+  public deletePost(): void {
     if (confirm('Are You Sure You want to Delete the Post?')) {
-      this.store.dispatch(postActions.DeletePost({ id: post.id }));
+      let id: number = this.id;
+      this.store.dispatch(postActions.DeletePost({ id }));
+      this.actions$
+        .pipe(ofType(postActions.DeletePostSuccess), take(1))
+        .subscribe(() => this.router.navigate(['/home']));
     }
-    this.router.navigate(['/home']);
   }
 
-  updatePost() {
+  public updatePost(post: Post): void {
     const updatedPost: Update<Post> = {
       id: this.id,
       changes: this.changedPost(),
