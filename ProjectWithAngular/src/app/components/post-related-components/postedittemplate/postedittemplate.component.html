@@ -1,19 +1,44 @@
 <div class="newPostForm">
-    <h1>Add a new Post</h1>
-    <form id="form" method="post" [formGroup]="editPost" >
-        <input type="text" formControlName="title" id="title" placeholder="Title" required />
-        <input type="text" formControlName="content" id="content" placeholder="Content" required />
-        <div class="radioButtons">
-            <label *ngFor="let singletag of tags; let i = index">
-                <input type="checkbox" [value]="singletag.value" (change)="onCheckboxChange($event)" [checked]="editPost.get('tags').value.includes(singletag.value)"/>
-                {{ singletag.name }}
-            </label>
-        </div>
-        <input type="text" formControlName="author" id="author" placeholder="Author" required />
-    </form>
-    <div class="buttons">
-        <button class="button" id="update" (click)="updatePost()" >Update</button>
-        <button class="button" id="cancel" routerLink="/home">Cancel</button>
-        <button class="button" id="delete" (click)="deletePost(post)">Delete</button>
+  <h1>Add a new Post</h1>
+  <form id="form" method="post" [formGroup]="postForm">
+    <input
+      type="text"
+      formControlName="title"
+      id="title"
+      placeholder="Title"
+      required
+    />
+    <input
+      type="text"
+      formControlName="content"
+      id="content"
+      placeholder="Content"
+      required
+    />
+    <div class="radioButtons">
+      <label *ngFor="let singletag of tags; let i = index">
+        <input
+          type="checkbox"
+          [value]="singletag.value"
+          (change)="onCheckboxChange($event)"
+          [checked]="postForm.get('tags').value.includes(singletag.value)"
+        />
+        {{ singletag.name }}
+      </label>
     </div>
+    <input
+      type="text"
+      formControlName="author"
+      id="author"
+      placeholder="Author"
+      required
+    />
+  </form>
+  <div class="buttons">
+    <button class="button" id="update" (click)="updatePost()">Update</button>
+    <button class="button" id="cancel" routerLink="/home">Cancel</button>
+    <button class="button" id="delete" (click)="deletePost(post)">
+      Delete
+    </button>
+  </div>
 </div>

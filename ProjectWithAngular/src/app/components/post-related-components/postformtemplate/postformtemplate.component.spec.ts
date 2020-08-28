@@ -8,9 +8,8 @@ describe('PostFormtemplateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostFormtemplateComponent ]
-    })
-    .compileComponents();
+      declarations: [PostFormtemplateComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

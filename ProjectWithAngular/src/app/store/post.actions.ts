@@ -1,6 +1,6 @@
-import { Update } from "@ngrx/entity";
-import { createAction, props } from '@ngrx/store'
-import { Post } from '../utils/post.interface'
+import { Update } from '@ngrx/entity';
+import { createAction, props } from '@ngrx/store';
+import { Post } from '../utils/post.interface';
 
 export const GetPosts = createAction('[Posts Component] Get Posts');
 
@@ -12,7 +12,6 @@ export const GetPostsFail = createAction(
   '[Posts Effect] Get Posts Fail',
   props<{ error: any }>()
 );
-
 
 export const GetPost = createAction(
   '[PostForm Component] Get Post',
@@ -27,7 +26,6 @@ export const GetPostFail = createAction(
   props<{ error: any }>()
 );
 
-
 export const CreatePost = createAction(
   '[PostForm Component] Create Post',
   props<{ post: Post }>()
@@ -41,12 +39,10 @@ export const CreatePostFail = createAction(
   props<{ error: any }>()
 );
 
-
 export const UpdatePost = createAction(
   '[PostForm Component] Update Post',
   props<{ post: Update<Post> }>()
 );
-
 
 export const DeletePost = createAction(
   '[PostForm Component] Delete Post',

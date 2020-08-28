@@ -8,9 +8,8 @@ describe('GeneralpostshomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GeneralpostshomeComponent ]
-    })
-    .compileComponents();
+      declarations: [GeneralpostshomeComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

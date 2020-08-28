@@ -1,22 +1,32 @@
 <section class="holiday-posts">
-    <div class="container">
-        <div class="section-content flex-container">
-            <div class="holiday-image" *ngFor="let holidaypost of holidayposts; let i = index">
-                <img src="{{holidaypost.imgsrc}}" alt="{{holidaypost.alt}}">
-                <div class="holiday-post-details">
-                    <div class="tags">
-                            <ul class="tags">
-                                <li class="zoom zoom-transition" *ngFor="let tag of holidayposttags"><a href="{{tag.href}}">{{tag.name}}</a></li>
-                            </ul>
-                    </div>
-                    <div class="image-text">
-                        <h3>{{holidaypost.imagetext}}</h3>
-                    </div>
-                    <div class="image-date">
-                        <a href="#"><span class="post-date"></span>{{holidaypost.postdate}}</a>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="section-content flex-container">
+      <div
+        class="holiday-image"
+        *ngFor="let holidaypost of holidayposts; let i = index"
+      >
+        <img src="{{ holidaypost.imgsrc }}" alt="{{ holidaypost.alt }}" />
+        <div class="holiday-post-details">
+          <div class="tags">
+            <ul class="tags">
+              <li
+                class="zoom zoom-transition"
+                *ngFor="let tag of holidayposttags"
+              >
+                <a href="{{ tag.href }}">{{ tag.name }}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="image-text">
+            <h3>{{ holidaypost.imagetext }}</h3>
+          </div>
+          <div class="image-date">
+            <a href="#"
+              ><span class="post-date"></span>{{ holidaypost.postdate }}</a
+            >
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>

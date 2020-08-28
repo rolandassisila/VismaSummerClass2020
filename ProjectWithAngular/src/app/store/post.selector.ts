@@ -1,6 +1,10 @@
 import { createSelector, createFeatureSelector } from '@ngrx/store';
 
-import { PostState, postAdapter, postStateFeatureKey} from './../app-state/post.state';
+import {
+  PostState,
+  postAdapter,
+  postStateFeatureKey,
+} from './../app-state/post.state';
 
 export const selectPostsFeature = createFeatureSelector<PostState>(
   postStateFeatureKey

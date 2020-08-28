@@ -1,15 +1,21 @@
 <div class="main-posts" id="postForm">
-    <img src="../../../assets/images/city-2.jpg" alt="#" (click)="editForm(post)">
-    <div class="main-posts-details">
-        <ul class="tags zoom zoom-transition" *ngFor="let tag of post.tags">
-            <li><a href="#">{{ tag }}</a></li>
-        </ul>
+  <img
+    src="../../../assets/images/city-2.jpg"
+    alt="#"
+    (click)="editForm(post)"
+  />
+  <div class="main-posts-details">
+    <ul class="tags zoom zoom-transition" *ngFor="let tag of post.tags">
+      <li>
+        <a href="#">{{ tag }}</a>
+      </li>
+    </ul>
     <div class="latest-posts-topic">
-        <h1> {{ post.title }} </h1>
-        <h3> {{ post.content }}</h3>
+      <h1>{{ post.title }}</h1>
+      <h3>{{ post.content }}</h3>
     </div>
     <div class="latest-posts-date">
-        <a href="#"><span class="post-date"></span>{{ post.date }}</a>
+      <a href="#"><span class="post-date"></span>{{ post.date }}</a>
     </div>
-    </div>
+  </div>
 </div>

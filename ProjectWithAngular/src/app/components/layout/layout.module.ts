@@ -20,14 +20,14 @@ import { HolidaypostsComponent } from './holidayposts/holidayposts.component';
     GeneralpostslifeComponent,
     GeneralpostshomeComponent,
     HeroComponent,
-    HolidaypostsComponent
+    HolidaypostsComponent,
   ],
   imports: [
     CommonModule,
     PostRelatedComponentsModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     FooterComponent,
@@ -36,7 +36,7 @@ import { HolidaypostsComponent } from './holidayposts/holidayposts.component';
     GeneralpostslifeComponent,
     GeneralpostshomeComponent,
     HeroComponent,
-    HolidaypostsComponent
-  ]
+    HolidaypostsComponent,
+  ],
 })
-export class LayoutModule { }
+export class LayoutModule {}

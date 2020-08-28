@@ -1,24 +1,21 @@
-import { Injectable } from "@angular/core";
-import { Actions, ofType, createEffect } from "@ngrx/effects";
-import {  of } from "rxjs";
-import { map, mergeMap, catchError, tap, concatMap } from "rxjs/operators";
+import { Injectable } from '@angular/core';
+import { Actions, ofType, createEffect } from '@ngrx/effects';
+import { of } from 'rxjs';
+import { map, mergeMap, catchError, tap, concatMap } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { RestService } from "./../utils/post-rest/rest.service";
-import * as postActions from "../state/post.actions";
-import { Post } from '../utils/post.interface'
-
+import { RestService } from './../utils/post-rest/rest.service';
+import * as postActions from '../store/post.actions';
+import { Post } from '../utils/post.interface';
 
 @Injectable()
 export class PostEffects {
-
   constructor(
     private actions$: Actions,
     private restService: RestService,
     private httpClient: HttpClient,
     private router: Router
   ) {}
-
 
   getPosts$ = createEffect(() =>
     this.actions$.pipe(
@@ -31,7 +28,6 @@ export class PostEffects {
       )
     )
   );
-
 
   getPost$ = createEffect(() =>
     this.actions$.pipe(
@@ -49,8 +45,7 @@ export class PostEffects {
     )
   );
 
-
- createPost$ = createEffect(() =>
+  createPost$ = createEffect(() =>
     this.actions$.pipe(
       ofType(postActions.CreatePost),
       mergeMap((action) =>
@@ -67,9 +62,7 @@ export class PostEffects {
     () =>
       this.actions$.pipe(
         ofType(postActions.UpdatePost),
-        concatMap((action) =>
-          this.restService.updatePost(action.post.changes)
-        ),
+        concatMap((action) => this.restService.updatePost(action.post.changes)),
         tap(() => this.router.navigateByUrl('/'))
       ),
     { dispatch: false }

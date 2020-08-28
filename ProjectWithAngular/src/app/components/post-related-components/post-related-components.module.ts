@@ -8,36 +8,34 @@ import { PostComponent } from './post/post.component';
 import { PostedittemplateComponent } from './postedittemplate/postedittemplate.component';
 import { PostFormtemplateComponent } from './postformtemplate/postformtemplate.component';
 
-import { PostEffects } from './../../state/post.effects';
-import { postReducer } from './../../state/post.reducer';
-
+import { PostEffects } from './../../store/post.effects';
+import { postReducer } from './../../store/post.reducer';
+import { postStateFeatureKey } from './../../app-state/post.state';
 import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from "@ngrx/store";
+import { StoreModule } from '@ngrx/store';
 
-
-const postRoutes: Routes = [{ path: "", component: PostComponent }];
-
+const postRoutes: Routes = [{ path: '', component: PostComponent }];
 
 @NgModule({
   declarations: [
     AllpostsComponent,
     PostComponent,
     PostedittemplateComponent,
-    PostFormtemplateComponent
-   ],
+    PostFormtemplateComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
-    StoreModule.forFeature("posts", postReducer),
-    EffectsModule.forFeature([PostEffects])
+    StoreModule.forFeature(postStateFeatureKey, postReducer),
+    EffectsModule.forFeature([PostEffects]),
   ],
   exports: [
     AllpostsComponent,
     PostComponent,
     PostedittemplateComponent,
-    PostFormtemplateComponent
-  ]
+    PostFormtemplateComponent,
+  ],
 })
-export class PostRelatedComponentsModule { }
+export class PostRelatedComponentsModule {}

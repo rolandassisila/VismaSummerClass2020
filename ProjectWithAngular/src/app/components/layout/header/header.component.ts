@@ -3,29 +3,27 @@ import { todaysDate } from '../../../utils/helpers';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
   currentDate = todaysDate;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-  
+  ngOnInit(): void {}
+
   topnavs: any[] = [
-    {name: "Blog", value:"Blog", routerLink: "" },
-    {name: "Latest", value:"Latest", routerLink: "" },
-    {name: "Life", value:"Life", routerLink: "" },
-    {name: "Travel", value:"Travel", routerLink: "" },
-    {name: "Fashion", value:"Fashion", routerLink: "" }
+    { name: 'Blog', value: 'Blog', routerLink: '' },
+    { name: 'Latest', value: 'Latest', routerLink: '' },
+    { name: 'Life', value: 'Life', routerLink: '' },
+    { name: 'Travel', value: 'Travel', routerLink: '' },
+    { name: 'Fashion', value: 'Fashion', routerLink: '' },
   ];
 
   sprites: any[] = [
-    {name: "Facebook", class:"facebook", routerLink: "" },
-    {name: "Twitter", class:"twitter", routerLink: "" },
-    {name: "Pinterest", class:"pinterest", routerLink: "" },
-    {name: "Youtube", class:"youtube", routerLink: "" }
+    { name: 'Facebook', class: 'facebook', routerLink: '' },
+    { name: 'Twitter', class: 'twitter', routerLink: '' },
+    { name: 'Pinterest', class: 'pinterest', routerLink: '' },
+    { name: 'Youtube', class: 'youtube', routerLink: '' },
   ];
 }
