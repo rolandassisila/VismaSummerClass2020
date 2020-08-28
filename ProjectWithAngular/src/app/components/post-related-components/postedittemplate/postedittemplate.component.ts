@@ -90,7 +90,7 @@ export class PostedittemplateComponent implements OnInit {
     }
   }
 
-  public updatePost(post: Post): void {
+  public updatePost(): void {
     const updatedPost: Update<Post> = {
       id: this.id,
       changes: this.changedPost(),
@@ -106,7 +106,7 @@ export class PostedittemplateComponent implements OnInit {
       author: this.postForm.controls.author.value,
       date: todaysDate,
       tags: this.postForm.controls.tags.value,
-      id: this.post.id,
+      id: this.id,
     };
   }
 
